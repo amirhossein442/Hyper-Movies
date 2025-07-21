@@ -1,2 +1,2 @@
 
-!(تصویر)[/public/Capture.PNG]
+![تصویر](./public/Capture.PNG)
