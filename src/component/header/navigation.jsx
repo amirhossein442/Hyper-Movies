@@ -5,7 +5,7 @@ export const Navigation = () => {
     <nav className="container flex mt-10 items-center text-slate-200">
       <div className="flex items-center">
         <h1 className="text-2xl mr-12">
-          Hyper<span className="text-rose-600">Movies</span>
+          Hyper<span className="text-rose-600 font-bold">Movies</span>
           <p className="text-xs text-center text-slate-400">Film review</p>
         </h1>
 

@@ -12,13 +12,13 @@ export const HeaderSlider = () => {
         modules={[Autoplay, Pagination]}
         slidesPerView={4}
         spaceBetween={20}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        autoplay={{ delay: 2000 }}
         loop
       >
-        {[1, 2, 3, 4,5].map((number) => (
+        {[1, 2, 3, 4, 5].map((number) => (
           <SwiperSlide key={number}>
             <img
-              className="w-full h-[22rem] object-cover"
+              className="w-full h-[22rem] object-fill"
               src={`http://busterhtml.mbkip3ms9u-e92498n216kr.p.temp-site.link/images/uploads/slider${number}.jpg`}
             />
           </SwiperSlide>
