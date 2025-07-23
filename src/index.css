@@ -6,7 +6,17 @@
 
 body {
     font-family: "Playfair Display", serif;
-    background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
-    margin: auto;
     margin-bottom: 500px;
+}
+
+.swiper-pagination {
+  @apply absolute right-0 bottom-2 z-10;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-red-500 opacity-100;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-blue-500;
 }

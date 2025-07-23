@@ -2,7 +2,7 @@ import React from "react";
 
 export const Navigation = () => {
   return (
-    <nav className="container flex mt-10 items-center text-slate-200">
+    <nav className="flex items-center text-slate-200">
       <div className="flex items-center">
         <h1 className="text-2xl mr-12">
           Hyper<span className="text-rose-600 font-bold">Movies</span>
@@ -10,16 +10,16 @@ export const Navigation = () => {
         </h1>
 
         <ul className="flex gap-6 uppercase">
-          <li>
+          <li className="hover:text-rose-600">
             <a href="#">Movie</a>
           </li>
-          <li>
+          <li className="hover:text-rose-600">
             <a href="#">Tvshows</a>
           </li>
-          <li>
+          <li className="hover:text-rose-600">
             <a href="#">people</a>
           </li>
-          <li>
+          <li className="hover:text-rose-600">
             <a href="#">More</a>
           </li>
         </ul>
