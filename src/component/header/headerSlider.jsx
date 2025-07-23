@@ -11,12 +11,27 @@ export const HeaderSlider = ({ setHeaderBg }) => {
   return (
     <div className="container">
       <Swiper
-        modules={[Autoplay, Pagination]}
-        pagination={{
-          dynamicBullets: true,
+        breakpoints={{
+          320: {
+           slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
         }}
-        slidesPerView={4}
-        spaceBetween={20}
+        modules={[Autoplay]}
+        slidesPerView={0}
+        spaceBetween={0}
         autoplay={{ delay: 2000 }}
         loop
       >
@@ -24,7 +39,7 @@ export const HeaderSlider = ({ setHeaderBg }) => {
           <SwiperSlide key={number}>
             <img
               onMouseOver={handelBg}
-              className="w-full h-[350px] rounded object-cover"
+              className="w-full  lg:h-[380px]  rounded object-cover"
               src={`/images/header-poster${number}.jpg`}
             />
           </SwiperSlide>
