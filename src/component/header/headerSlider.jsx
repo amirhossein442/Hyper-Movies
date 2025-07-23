@@ -30,8 +30,6 @@ export const HeaderSlider = ({ setHeaderBg }) => {
           },
         }}
         modules={[Autoplay]}
-        slidesPerView={0}
-        spaceBetween={0}
         autoplay={{ delay: 2000 }}
         loop
       >
@@ -39,7 +37,7 @@ export const HeaderSlider = ({ setHeaderBg }) => {
           <SwiperSlide key={number}>
             <img
               onMouseOver={handelBg}
-              className="w-full  lg:h-[380px]  rounded object-cover"
+              className="w-full rounded object-cover"
               src={`/images/header-poster${number}.jpg`}
             />
           </SwiperSlide>
