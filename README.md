@@ -1,2 +1,2 @@
 
-![تصویر](./public/images/Capture.PNG)
+![تصویرموبایل](./public/images/Website-photo-M.PNG)
