@@ -5,7 +5,7 @@ export const Navigation = () => {
 
   return (
     <>
-      <nav className="flex items-center text-slate-200 bg-slate-900 px-6 py-6 sm:bg-transparent ">
+      <nav className="flex items-center text-slate-200 bg-slate-900 px-6 py-6 md:bg-transparent ">
         <div className="flex items-center">
           <h1 className="text-2xl mr-12">
             Hyper<span className="text-rose-600 font-bold">Movies</span>
@@ -62,13 +62,13 @@ export const Navigation = () => {
         </div>
       </nav>
 
-      <div>
-        <ul
-          className={`transition-all duration-500${
+      <div className={` transition-all duration-500${
             isHideMenu
-              ? "h-0 opacity-0"
-              : "h-auto bg-slate-900 border-t-2 border-slate-400 text-center text-slate-200 py-4 "
-          }`}
+              ? "block h-0 opacity-0"
+              : "hidden h-auto opacity-100"
+          }`}>
+        <ul
+          className="bg-slate-900 border-t-2 border-slate-400 text-center text-slate-200 py-4"
           >
           <li className="hover:text-rose-600 py-2">
             <a href="#">Movie</a>

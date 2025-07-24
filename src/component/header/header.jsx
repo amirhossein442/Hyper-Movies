@@ -18,8 +18,8 @@ export const Header = () => {
         objectFit: "top",
       }}
     >
+      <Navigation />
       <div className="container mx-auto">
-        <Navigation />
         <SearchBox />
         <FollowUs />
         <HeaderSlider  setHeaderBg={setHeaderBg}/>
