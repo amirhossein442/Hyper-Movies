@@ -8,15 +8,3 @@ body {
     font-family: "Playfair Display", serif;
     margin-bottom: 500px;
 }
-
-.swiper-pagination {
-  @apply absolute right-0 bottom-2 z-10;
-}
-
-.swiper-pagination-bullet {
-  @apply bg-red-500 opacity-100;
-}
-
-.swiper-pagination-bullet-active {
-  @apply bg-blue-500;
-}

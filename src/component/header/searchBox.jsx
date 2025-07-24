@@ -1,7 +1,7 @@
 import React from "react";
 export const SearchBox = () => {
   return (
-    <section className="mt-12 text-state-300">
+    <section className="mt-16 text-state-300">
       <div className="relative">
         <input
           type="text"
