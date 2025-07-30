@@ -1,12 +1,14 @@
 import { Header } from "./component/header/header";
-import { Main } from "./component/main/main";
+import { Main0 } from "./component/main/Main0";
+
 import "./index.css";
 
 function App() {
   return (
     <div>
       <Header />
-      <Main />
+      <Main0 />
+      
     </div>
   );
 }
