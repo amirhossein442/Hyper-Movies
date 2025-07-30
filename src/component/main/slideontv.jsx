@@ -17,7 +17,7 @@ export const SlideMovie2 = () => {
 
   return (
     <div className="container lg:w-8/12 mr-20">
-      <h1 className="text-3xl font-bold text-white mb-5">On TV</h1>
+      <h1 className="text-3xl font-bold text-white mb-5 ml-4 sm:ml-0">On TV</h1>
       <Swiper
         modules={[Navigation]}
         breakpoints={{
@@ -42,7 +42,7 @@ export const SlideMovie2 = () => {
         loop
       >
         {names.map((name, index) => (
-          <SwiperSlide key={index} className="w-screen">
+          <SwiperSlide key={index} className="p-10 sm:p-0">
             <div className="relative">
               <img
                 className="w-[400px] h-[280px]  object-fill"

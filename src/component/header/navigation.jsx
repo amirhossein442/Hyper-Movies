@@ -13,16 +13,16 @@ export const Navigation = () => {
           </h1>
 
           <ul className="hidden md:flex gap-6 uppercase">
-            <li className="hover:text-rose-600">
+            <li className="hover:text-rose-600 transition-all duration-300">
               <a href="#">Movie</a>
             </li>
-            <li className="hover:text-rose-600">
+            <li className="hover:text-rose-600 transition-all duration-300">
               <a href="#">Tvshows</a>
             </li>
-            <li className="hover:text-rose-600">
+            <li className="hover:text-rose-600 transition-all duration-300">
               <a href="#">people</a>
             </li>
-            <li className="hover:text-rose-600">
+            <li className="hover:text-rose-600 transition-all duration-300">
               <a href="#">More</a>
             </li>
           </ul>

@@ -5,7 +5,7 @@ export const Spotlight = () => {
         Spotlight Celebrities
       </h2>
       <hr />
-      <div className=" mt-5 text-white">
+      <div className=" mt-5 text-white hover:cursor-pointer hover:text-rose-500 transition-all duration-300">
         <div className="flex items-center gap-4">
           <img
             src="/images/spotlight1.jpg"
@@ -19,7 +19,7 @@ export const Spotlight = () => {
         </div>
       </div>
 
-      <div className=" items-center gap-4 mt-5 text-white">
+      <div className=" items-center gap-4 mt-5 text-white hover:cursor-pointer hover:text-rose-500 transition-all duration-300">
         <div className="flex items-center gap-4">
           <img src="/images/spotlight3.jpg" alt="test" className="rounded" />
           <div className="flex flex-col">
@@ -29,7 +29,7 @@ export const Spotlight = () => {
         </div>
       </div>
 
-      <div className=" items-center gap-4 mt-5 text-white">
+      <div className=" items-center gap-4 mt-5 text-white hover:cursor-pointer hover:text-rose-500 transition-all duration-300">
         <div className="flex items-center gap-4">
           <img
             src="/images/spotlight2.webp"
@@ -43,7 +43,7 @@ export const Spotlight = () => {
         </div>
       </div>
 
-      <div className=" items-center gap-4 mt-5 text-white">
+      <div className=" items-center gap-4 mt-5 text-white  hover:text-rose-500 transition-all duration-300 cursor-pointer">
         <div className="flex items-center gap-4">
           <img src="/images/spotlight4.jpg" alt="test" className="rounded" />
           <div className="flex flex-col">
@@ -53,7 +53,7 @@ export const Spotlight = () => {
         </div>
       </div>
 
-      <h1 className="text-gray-400 text-bold text-xl mt-10">See All Celebrities &gt;</h1>
+      <h1 className="text-gray-400 text-bold text-xl mt-10 hover:text-rose-500 transition-all duration-300 cursor-pointer">See All Celebrities &gt;</h1>
     </div>
   );
 };

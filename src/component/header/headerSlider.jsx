@@ -37,7 +37,7 @@ export const HeaderSlider = ({ setHeaderBg }) => {
           <SwiperSlide key={number}>
             <img
               onMouseOver={handelBg}
-              className="w-full rounded object-cover"
+              className="w-full rounded object-cover p-5 sm:p-0"
               src={`/images/header-poster${number}.jpg`}
             />
           </SwiperSlide>
