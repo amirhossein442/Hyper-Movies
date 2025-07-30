@@ -65,7 +65,7 @@ export const Navigation = () => {
       <div className={` transition-all duration-500${
             isHideMenu
               ? "block h-0 opacity-0"
-              : "hidden h-auto opacity-100"
+              : "h-auto opacity-100"
           }`}>
         <ul
           className="bg-slate-900 border-t-2 border-slate-400 text-center text-slate-200 py-4"

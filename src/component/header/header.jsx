@@ -8,7 +8,7 @@ export const Header = () => {
     const [headerBg, setHeaderBg] = useState("/images/bg-cinema.jpg")
   return (
     <header
-      className="md:py-10 md:px-10 "
+      className="md:py-10 md:px-10 pb-32 "
       style={{
         backgroundImage:
           `linear-gradient(to bottom, rgba(30 41 59 / 100%), rgba(30 41 59 / 50%),rgba(30 41 59 / 20%)),url(${headerBg})`,
@@ -16,6 +16,7 @@ export const Header = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top",
         objectFit: "top",
+        
       }}
     >
       <Navigation />
