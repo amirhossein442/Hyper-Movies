@@ -14,7 +14,6 @@ export const SearchBox = () => {
           width="28"
           height="28"
           fill="currentColor"
-          class="bi bi-search"
           viewBox="0 0 16 16"
           className="absolute right-7 top-4 "
         >

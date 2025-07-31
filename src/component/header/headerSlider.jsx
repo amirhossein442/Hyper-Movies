@@ -34,7 +34,7 @@ export const HeaderSlider = ({ setHeaderBg }) => {
       >
         {[0, 1, 2, 3, 4].map((number) => (
           <SwiperSlide key={number}>
-            <img
+            <img alt="img"
               onMouseOver={handelBg}
               className="w-full h-[450px] sm:h-[400px]  rounded object-cover p-5 sm:p-0"
               src={`/images/header-poster${number}.jpg`}

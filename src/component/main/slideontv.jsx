@@ -44,8 +44,8 @@ export const SlideMovie2 = () => {
         {names.map((name, index) => (
           <SwiperSlide key={index} className="p-10 sm:p-0">
             <div className="relative">
-              <img
-                className="w-[400px] h-[280px]  object-fill"
+              <img alt="img"
+                className="w-[400px] h-[280px]  object-fill rounded"
                 src={`http://busterhtml.mbkip3ms9u-e92498n216kr.p.temp-site.link/images/uploads/mv-item${
                   index + 1
                 }.jpg`}

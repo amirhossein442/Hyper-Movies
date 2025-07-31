@@ -11,7 +11,6 @@ export const FollowUs = () => {
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-youtube"
                 viewBox="0 0 16 16"
                 className="hover:text-rose-500"
               >
@@ -26,7 +25,6 @@ export const FollowUs = () => {
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-instagram"
                 viewBox="0 0 16 16"
                 className="hover:text-rose-500"
               >
@@ -41,7 +39,6 @@ export const FollowUs = () => {
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-facebook"
                 viewBox="0 0 16 16"
                 className="hover:text-rose-500"
               >
@@ -56,7 +53,6 @@ export const FollowUs = () => {
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-twitter-x"
                 viewBox="0 0 16 16"
                 className="hover:text-rose-500"
               >
