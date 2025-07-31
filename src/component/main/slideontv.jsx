@@ -50,7 +50,7 @@ export const SlideMovie2 = () => {
                   index + 1
                 }.jpg`}
               />
-              <div className=" absolute inset-0 bg-gradient-to-b from-slate-800/20 hover:from-black to-slate-900/60 hover:to-gray-800/70"></div>
+              <div className=" absolute inset-0 bg-gradient-to-b from-slate-800/30 hover:from-slate-900 to-slate-900/60 hover:to-rose-500/60"></div>
 
               <div className="absolute bottom-14 left-10 flex-column text-2xl text-white">
                 <span className="flex items-center gap-2">
