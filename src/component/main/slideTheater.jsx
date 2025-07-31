@@ -16,7 +16,7 @@ export const SlideMovie = () => {
   ];
 
   return (
-    <div className="container lg:w-8/12 mr-20">
+    <div className="container lg:w-8/12 mr-20 mt-20">
       <h1 className="text-3xl font-bold text-white mb-5 ml-4 sm:ml-0">in theater</h1>
       <Swiper
         modules={[Navigation]}

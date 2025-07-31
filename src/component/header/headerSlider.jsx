@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { Pagination } from "swiper/modules";
 
 export const HeaderSlider = ({ setHeaderBg }) => {
   const handelBg = (e) => {
@@ -16,15 +15,15 @@ export const HeaderSlider = ({ setHeaderBg }) => {
            slidesPerView: 1,
             spaceBetween: 10,
           },
-          640: {
+          500: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 10,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 20,
           },
-          1024: {
+          1200: {
             slidesPerView: 4,
             spaceBetween: 40,
           },
@@ -37,7 +36,7 @@ export const HeaderSlider = ({ setHeaderBg }) => {
           <SwiperSlide key={number}>
             <img
               onMouseOver={handelBg}
-              className="w-full rounded object-cover p-5 sm:p-0"
+              className="w-full h-[450px] sm:h-[400px]  rounded object-cover p-5 sm:p-0"
               src={`/images/header-poster${number}.jpg`}
             />
           </SwiperSlide>

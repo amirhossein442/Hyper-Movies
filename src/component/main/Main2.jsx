@@ -2,7 +2,7 @@ import { SlideMovie2 } from "./slideontv"
 
 export const Main2 =()=> {
     return(
-        <div className="container mx-auto mt-40 lg:mt-0">
+        <div className="container mx-auto mt-40 lg:mt-0 pb-44">
             <SlideMovie2 />
         </div>
     )

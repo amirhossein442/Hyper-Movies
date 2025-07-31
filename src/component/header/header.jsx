@@ -11,11 +11,11 @@ export const Header = () => {
       className="md:py-10 md:px-10 pb-32 "
       style={{
         backgroundImage:
-          `linear-gradient(to bottom, rgba(0 0 0 / 100%), rgba(30 41 59 / 50%),rgba(30 41 59 / 20%)),url(${headerBg})`,
+          `linear-gradient(to bottom, rgba(0 0 0 / 100%), rgb(2 13 24/ 74%), rgb(2 13 24/ 90%)),url(${headerBg})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top",
-        objectFit: "top",
+        objectFit: "top", 
         
       }}
     >

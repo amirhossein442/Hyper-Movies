@@ -1,6 +1,6 @@
 export const Spotlight = () => {
   return (
-    <div className="hidden lg:block w-4/12">
+    <div className="hidden lg:block w-4/12 mt-20">
       <h2 className="text-white text-bold text-2xl mb-3">
         Spotlight Celebrities
       </h2>
@@ -36,14 +36,14 @@ export const Spotlight = () => {
             alt="test"
             className="h-[70px] w-[70px] object-top object-cover"
           />
-          <div className="flex flex-col">
+          <div className="flex flex-col " >
             <span>Brad pitt</span>
             <span className="text-gray-400">Actor</span>
           </div>
         </div>
       </div>
 
-      <div className=" items-center gap-4 mt-5 text-white  hover:text-rose-500 transition-all duration-300 cursor-pointer">
+      <div className="mb-10 items-center gap-4 mt-5 text-white  hover:text-rose-500 transition-all duration-300 cursor-pointer">
         <div className="flex items-center gap-4">
           <img src="/images/spotlight4.jpg" alt="test" className="rounded" />
           <div className="flex flex-col">
@@ -53,7 +53,9 @@ export const Spotlight = () => {
         </div>
       </div>
 
-      <h1 className="text-gray-400 text-bold text-xl mt-10 hover:text-rose-500 transition-all duration-300 cursor-pointer">See All Celebrities &gt;</h1>
+      <a href="#" className="text-gray-400 text-bold text-xl hover:text-rose-500 transition-all duration-300 cursor-pointer">
+        See All Celebrities &gt;
+      </a>
     </div>
   );
 };
