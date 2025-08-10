@@ -29,14 +29,15 @@ export const HeaderSlider = ({ setHeaderBg }) => {
           },
         }}
         modules={[Autoplay]}
-        autoplay={{ delay: 2000 }}
-        loop
+        autoplay={{ delay: 3000 }}
+        
+        loop={true}
       >
         {[0, 1, 2, 3, 4].map((number) => (
           <SwiperSlide key={number}>
             <img alt="img"
               onMouseOver={handelBg}
-              className="w-full h-[450px] sm:h-[400px]  rounded object-cover p-5 sm:p-0"
+              className="w-full h-[450px] sm:h-[400px]  rounded object-cover p-5 sm:p-0 md:pb-5"
               src={`/images/header-poster${number}.jpg`}
             />
           </SwiperSlide>

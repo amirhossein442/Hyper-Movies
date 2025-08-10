@@ -22,23 +22,27 @@ export const SlideMovie = () => {
         modules={[Navigation]}
         breakpoints={{
           320: {
-            spaceBetween: 10,
+            spaceBetween: 0,
             slidesPerView: 1,
           },
           640: {
             spaceBetween: 20,
             slidesPerView: 2,
+            centeredSlides: true
           },
           768: {
             spaceBetween: 20,
             slidesPerView: 3,
+            centeredSlides: true
           },
           1024: {
             spaceBetween: 30,
             slidesPerView: 4,
+            centeredSlides: true
           },
         }}
         navigation={true}
+        
         loop
       >
         {names.map((name, index) => (
