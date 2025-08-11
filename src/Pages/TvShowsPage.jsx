@@ -14,7 +14,7 @@ export const TvShowsPage = () => {
           objectFit: "top",
         }}
       >
-        <div className="container ml-auto text-center pt-16 pb-24">
+        <div className="container mx-auto text-center pt-16 pb-24">
           <h1 className="text-white text-4xl  pb-5 font-bold">
             TVSHOES LISTING
           </h1>
