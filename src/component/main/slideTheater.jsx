@@ -72,7 +72,7 @@ export const SlideMovie = () => {
                     {Math.round(movie.vote_average)}
                     <span className="absolute text-xl -bottom-1"> /10</span>
                   </span>
-                  <span className="text-white bottom-1 text-sm w-40">
+                  <span className="text-white bottom-1 text-sm w-32">
                     {movie.title}
                   </span>
                 </span>

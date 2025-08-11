@@ -68,7 +68,7 @@ export const SlideMovie2 = () => {
                   <span className="absolute -bottom-6 left-7">
                     7.5<span className="absolute text-xl -bottom-1"> /10</span>
                   </span>
-                  <span className="text-white bottom-1 text-sm w-40">
+                  <span className="text-white bottom-1 text-sm w-32">
                     {movie2.title}
                   </span>
                 </span>
