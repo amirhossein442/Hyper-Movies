@@ -10,25 +10,23 @@ export const Main0 = () => {
 
   return (
     <div className="bg-[rgb(2_13_24)] ">
-        <header
-          className="md:px-1 "
-          style={{
-            backgroundImage: `linear-gradient(to bottom, rgba(0 0 0 / 100%), rgb(2 13 24/ 74%), rgb(2 13 24/ 90%)),url(${headerBg})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "top",
-            objectFit: "top",
+      <header
+        className="md:px-1 "
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(0 0 0 / 100%), rgb(2 13 24/ 74%), rgb(2 13 24/ 90%)),url(${headerBg})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "top",
+          objectFit: "top",
+        }}
+      >
+        <div className="container mx-auto">
+          <FollowUs />
+          <HeaderSlider setHeaderBg={setHeaderBg} />
+        </div>
+      </header>
 
-          }}
-        >
-          <div className="container mx-auto">
-            <SearchBox />
-            <FollowUs />
-            <HeaderSlider setHeaderBg={setHeaderBg} />
-          </div>
-        </header>
-        
-        <div className="container mx-auto ">
+      <div className="container mx-auto ">
         <Main1 />
         <Main2 />
       </div>

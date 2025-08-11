@@ -64,19 +64,19 @@ export const Navigation = () => {
         </div>
       </nav>
 
-      <div className={` transition-all duration-500${
+      <div className={`z- transition-all duration-500${
             isHideMenu
-              ? "block h-0 opacity-0"
-              : "h-auto opacity-100"
+              ? " hidden "
+              : "opacity-100"
           }`}>
         <ul
           className="bg-slate-900 border-t-2 border-slate-400 text-center text-slate-200 py-4"
           >
           <li className="hover:text-rose-600 py-2">
-            <a href="#">Movie</a>
+            <Link to="/">Movie</Link>
           </li>
           <li className="hover:text-rose-600 py-2">
-            <a href="#">Tvshows</a>
+            <Link to="/tvshows">Tvshows</Link>
           </li>
           <li className="hover:text-rose-600 py-2">
             <a href="#">people</a>

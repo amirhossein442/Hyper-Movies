@@ -6,7 +6,7 @@ export const SearchBox = () => {
         <input
           type="text"
           className="w-full bg-slate-600 text-2xl p-2 border-4 border-slate-900 outline-none 
-          placeholder:text-sm mb-8"
+          placeholder:text-sm"
           placeholder="Search for a movie, series, or show..."
         />
         <svg
