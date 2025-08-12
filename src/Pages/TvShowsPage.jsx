@@ -27,8 +27,11 @@ export const TvShowsPage = () => {
         </div>
       </header>
 
-      <div className="container ml-auto pt-10">
-        <h1>rfdg</h1>
+      <div className="container ml-auto pt-10 aspect-video">
+        <div className="bg-white">1</div>
+        <div className="bg-white">2</div>
+        <div className="bg-white">3</div>
+        <div className="bg-white">4</div>
       </div>
     </div>
 

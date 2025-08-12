@@ -13,7 +13,6 @@ export const SlideMovie2 = () => {
       )
       .then((res) => setMovies2(res.data.results));
   }, []);
-  console.log(movies2);
   return (
     <div className="container lg:w-8/12 mr-20">
       <h1 className="text-3xl font-bold text-white mb-5 ml-4 sm:ml-0">On TV</h1>

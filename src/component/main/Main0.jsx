@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FollowUs } from "../header/foloowUs";
 import { HeaderSlider } from "../header/headerSlider";
-import { SearchBox } from "../header/searchBox";
 import { Main1 } from "./main1";
 import { Main2 } from "./Main2";
 
@@ -9,15 +8,15 @@ export const Main0 = () => {
   const [headerBg, setHeaderBg] = useState("/images/bg-cinema.jpg");
 
   return (
-    <div className="bg-[rgb(2_13_24)] ">
+    <div className="bg-[rgb(2_13_24)]">
       <header
         className="md:px-1 "
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0 0 0 / 100%), rgb(2 13 24/ 74%), rgb(2 13 24/ 90%)),url(${headerBg})`,
-          backgroundSize: "cover",
+          backgroundImage: `linear-gradient(to bottom, rgba(0 0 0 / 100%), rgb(2 13 24/ 24%), rgb(2 13 24/ 50%)),url(${headerBg})`,
+          backgroundSize:"cover",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "top",
-          objectFit: "top",
+          backgroundPosition: "center",
+          objectFit: "fill",
         }}
       >
         <div className="container mx-auto">

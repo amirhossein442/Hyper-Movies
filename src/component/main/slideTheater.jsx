@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-
 export const SlideMovie = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
@@ -14,7 +13,6 @@ export const SlideMovie = () => {
       )
       .then((res) => setMovies(res.data.results));
   }, []);
-
   return (
     <div className="container lg:w-8/12 mr-20 mt-20">
       <h1 className="text-3xl font-bold text-white mb-5 ml-4 sm:ml-0">
@@ -52,7 +50,7 @@ export const SlideMovie = () => {
               <img
                 alt={movie.title}
                 className="w-[400px] h-[280px]  object-fill rounded"
-                src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
               />
               <div className=" absolute inset-0 bg-gradient-to-b from-slate-800/30 hover:from-slate-900 to-slate-900/60 hover:to-rose-500/60"></div>
 

@@ -1,18 +1,26 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const HeaderSlider = ({ setHeaderBg }) => {
-  const handelBg = (e) => {
-    return (
-      console.log(e.target.currentSrc), setHeaderBg(e.target.currentSrc) // Assuming setHeaderBg is passed as a prop
-    );
-  };
+  const [movieHeader, setMovieHeader] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.themoviedb.org/3/movie/now_playing?api_key=c749ba85a95fb5a1032d6cc9d8bf39a0"
+      )
+      .then((res) => setMovieHeader(res.data.results));
+  }, []);
+  console.log(movieHeader);
+
   return (
-    <div className="container">
+    <div className="container md:pb-24">
       <Swiper
         breakpoints={{
           320: {
-           slidesPerView: 1,
+            slidesPerView: 1,
             spaceBetween: 10,
           },
           500: {
@@ -30,15 +38,15 @@ export const HeaderSlider = ({ setHeaderBg }) => {
         }}
         modules={[Autoplay]}
         autoplay={{ delay: 3000 }}
-        
         loop={true}
       >
-        {[0, 1, 2, 3, 4].map((number) => (
-          <SwiperSlide key={number}>
-            <img alt="img"
-              onMouseOver={handelBg}
-              className="w-full h-[450px] sm:h-[400px]  rounded object-cover p-5 sm:p-0 md:pb-5"
-              src={`/images/header-poster${number}.jpg`}
+        {movieHeader.map((movie) => (
+          <SwiperSlide key={movie.id}>
+            <img
+              alt="img"
+              onMouseOver={()=> setHeaderBg(`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`)}
+              className="w-full h-[450px] sm:h-[400px]  rounded object-cover p-5 sm:p-0 "
+              src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
             />
           </SwiperSlide>
         ))}
