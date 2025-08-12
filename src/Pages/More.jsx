@@ -15,7 +15,7 @@ export const More = () => {
       )
       .then((res) => {
         setMovie(res.data);
-        setHeaderBg(res.data.poster_path);
+        setHeaderBg(res.data.backdrop_path);
       });
   }, []);
   console.log(movie);

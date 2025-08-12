@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export const HeaderSlider = ({ setHeaderBg }) => {
   const [movieHeader, setMovieHeader] = useState([]);
@@ -42,13 +43,16 @@ export const HeaderSlider = ({ setHeaderBg }) => {
       >
         {movieHeader.map((movie) => (
           <SwiperSlide key={movie.id}>
+            <Link to={`/more/${movie.id}`}>
             <img
               alt="img"
               onMouseOver={()=> setHeaderBg(`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`)}
               className="w-full h-[450px] sm:h-[400px]  rounded object-cover p-5 sm:p-0 "
               src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
             />
+            </Link>
           </SwiperSlide>
+          
         ))}
       </Swiper>
     </div>
