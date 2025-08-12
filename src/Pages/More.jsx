@@ -26,7 +26,7 @@ export const More = () => {
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0 0 0 / 100%), 
           rgb(2 13 24/ 44%), rgb(0 0 0/ 100%)),
-          url(https://image.tmdb.org/t/p/w300${headerBg})`,
+          url(https://image.tmdb.org/t/p/w780${headerBg})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
