@@ -38,7 +38,7 @@ export const SlideMovie = () => {
             centeredSlides: true,
           },
           1024: {
-            spaceBetween: 30,
+            spaceBetween: 20,
             slidesPerView: 4,
             centeredSlides: true,
           },
