@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 import { TvShowsPage } from "./Pages/TvShowsPage";
 import { More } from "./Pages/More";
+import { PeoplePage } from "./Pages/PeoplePage";
+import { SearchPage } from "./Pages/SearchPage";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Main0 />}/>
         <Route path="/tvshows" element={< TvShowsPage />}/>
+        <Route path="/search" element={<SearchPage />}/>
         <Route path="/more/:id" element={< More />}/>
+        <Route path="/people" element={<PeoplePage />}/>
       </Routes>
       <Footer />
     </Router>

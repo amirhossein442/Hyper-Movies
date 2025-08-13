@@ -53,7 +53,7 @@ export const Spotlight = () => {
         </div>
       </div>
 
-      <a href="#" className="text-gray-400 text-bold text-xl hover:text-rose-500 transition-all duration-300 cursor-pointer">
+      <a href="/people" className="text-gray-400 text-bold text-xl hover:text-rose-500 transition-all duration-300 cursor-pointer">
         See All Celebrities &gt;
       </a>
     </div>

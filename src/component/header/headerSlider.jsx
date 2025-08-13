@@ -14,7 +14,6 @@ export const HeaderSlider = ({ setHeaderBg }) => {
       )
       .then((res) => setMovieHeader(res.data.results));
   }, []);
-  console.log(movieHeader);
 
   return (
     <div className="container md:pb-24">
@@ -39,10 +38,10 @@ export const HeaderSlider = ({ setHeaderBg }) => {
         }}
         modules={[Autoplay]}
         autoplay={{ delay: 3000 }}
-        loop={true}
+        
       >
-        {movieHeader.map((movie) => (
-          <SwiperSlide key={movie.id}>
+        {movieHeader.map((movie, index) => (
+          <SwiperSlide key={index}>
             <Link to={`/more/${movie.id}`}>
             <img
               alt="img"

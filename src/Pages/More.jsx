@@ -18,7 +18,7 @@ export const More = () => {
         setHeaderBg(res.data.backdrop_path);
       });
   }, []);
-  console.log(movie);
+  
   return (
     <div>
       <header
@@ -49,7 +49,7 @@ export const More = () => {
                       {movie.release_date}
                     </span>
                   </h2>
-                  <h3 className=" text-slate-300 mt-5 w-40 sm:w-full text-sm leading-6 sm:text-xl sm:leading-8">
+                  <h3 className=" hidden sm:block text-slate-300 mt-5 w-40 sm:w-full text-sm leading-6 sm:text-xl sm:leading-8">
                     {movie.overview}
                   </h3>
                   <div className="flex items-center ">

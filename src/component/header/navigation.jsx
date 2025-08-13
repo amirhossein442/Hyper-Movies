@@ -22,10 +22,10 @@ export const Navigation = () => {
               <Link to="/tvshows">Tvshows</Link>
             </li>
             <li className="hover:text-rose-600 transition-all duration-300">
-              <Link to="#">people</Link>
+              <Link to="/people">people</Link>
             </li>
             <li className="hover:text-rose-600 transition-all duration-300">
-              <Link to="#">More</Link>
+              <Link to="/more">More</Link>
             </li>
           </ul>
         </div>
