@@ -1,3 +1,3 @@
 #movie review site with React (Responsive)
 
-![تصویر دسکتاپ](./public/images/Website-photo.PNG)
+![تصویر دسکتاپ](./public/images/Capture.PNG)
