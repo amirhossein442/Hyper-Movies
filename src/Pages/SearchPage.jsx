@@ -16,14 +16,17 @@ export const SearchPage = () => {
             query: query,
           },
         })
-        .then((res) => setMovieSearch(res.data.results))
-        .catch((err) => console.error(err));
+        .then((res) => 
+          setMovieSearch(res.data.results))
     }
   }, [query]);
 
   return (
     <div className=" bg-slate-900 pt-12 pb-40">
-      <div className="container mx-auto px-10 pt-10 aspect-12/9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pb-24">
+      {movieSearch.length === 0 ? (
+        <p className="text-white text-3xl flex justify-center">IS NOT DEFIND</p>
+      ):(
+        <div className="container mx-auto px-10 pt-10 aspect-12/9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pb-24">
         {movieSearch.map((movie) => (
           <Link to={`/more/${movie.id}`} key={movie.id} className="relative">
             <img
@@ -58,6 +61,7 @@ export const SearchPage = () => {
           </Link>
         ))}
       </div>
+      )}
     </div>
   );
 };
