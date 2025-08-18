@@ -35,7 +35,7 @@ export const More = () => {
       >
         <div className="container mx-auto">
           {movie ? (
-            <div className="pb-20">
+            <div className="pb-60">
               <div className="flex pt-10 justify-center">
                 <img
                   className="ml-10 mr-10 w-32 h-52 sm:w-full sm:h-auto lg:h-[500px] object-contain"
@@ -59,11 +59,11 @@ export const More = () => {
                         width="16"
                         height="16"
                         fill="#e11d48"
-                        class="bi bi-heart-fill"
+                        className="bi bi-heart-fill"
                         viewBox="0 0 16 16"
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
                         />
                       </svg>

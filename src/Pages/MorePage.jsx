@@ -1,12 +1,7 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export const PeoplePage = () => {
-    const[character, setCharacter] = useState([])
-    useEffect(()=> {
-        
-    },[])
+export const MorePage = () => {
+    
   return (
     <div className="bg-[rgb(2_13_24)] ">
       <header
@@ -22,13 +17,13 @@ export const PeoplePage = () => {
       >
         <div className="container mx-auto text-center pt-16 pb-24">
           <h1 className="text-white text-4xl  pb-5 font-bold">
-            PEOPLE LISTING
+            More LISTING
           </h1>
           <div className="flex justify-center items-center z-10">
             <Link to="/" className="text-blue-300 text-xl">
               Movie<span className="ml-5">&gt;</span>
             </Link>
-            <p className="text-slate-300 ml-5">PEOPLE LISTING</p>
+            <p className="text-slate-300 ml-5">More LISTING</p>
           </div>
         </div>
       </header>
@@ -36,4 +31,4 @@ export const PeoplePage = () => {
       
     </div>
   );
-};
+}

@@ -79,7 +79,7 @@ export const Navigation = () => {
             <Link to="/tvshows">Tvshows</Link>
           </li>
           <li className="hover:text-rose-600 py-2">
-            <a href="#">people</a>
+            <Link href="/people">people</Link>
           </li>
           <li className="hover:text-rose-600 py-2">
             <a href="#">More</a>

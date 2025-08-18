@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export const SearchBox = () => {
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
-    if (e.key === "Enter" ) {
+    if (e.key === "Enter") {
       navigate(`/search?query=${encodeURIComponent(searchValue)}`);
     }
   };
@@ -21,16 +21,20 @@ export const SearchBox = () => {
           placeholder:text-sm"
           placeholder="Search for a movie, series, or show..."
         />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="28"
-          height="28"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-          className="absolute right-7 top-3"
+        <button
+          onClick={()=> navigate(`/search?query=${encodeURIComponent(searchValue)}`)}
         >
-          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-        </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            className="absolute right-7 top-3"
+          >
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+          </svg>
+        </button>
       </div>
     </section>
   );
