@@ -1,32 +1,44 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
 export const Navigation = () => {
   const [isHideMenu, setIsHideMenu] = useState("false");
+  const menuItems = [
+    {
+      path: "/",
+      name: "Movie",
+    },
+    {
+      path: "/tvshows",
+      name: "Tvshows",
+    },
+    {
+      path: "/people",
+      name: "People",
+    },
+    {
+      path: "/more",
+      name: "More",
+    },
+  ];
 
   return (
     <>
       <nav className="flex items-center text-slate-200 bg-slate-900 px-6 pt-6 md:bg-transparent ">
         <div className="flex items-center">
-          <h1 className="text-2xl mr-12">
-            Hyper<span className="text-rose-600 font-bold">Movies</span>
-            <p className="text-xs text-center text-slate-400">Film review</p>
-          </h1>
+          <Link to={"/"}>
+            <h1 className="text-2xl mr-12 pb-2">
+              Hyper<span className="text-rose-600 font-bold">Movies</span>
+              <p className="text-xs text-center text-slate-400">Film review</p>
+            </h1>
+          </Link>
 
           <ul className="hidden md:flex gap-6 uppercase">
-            <li className="hover:text-rose-600 transition-all duration-300">
-              <Link to="/">Movie</Link>
-            </li>
-            <li className="hover:text-rose-600 transition-all duration-300">
-              <Link to="/tvshows">Tvshows</Link>
-            </li>
-            <li className="hover:text-rose-600 transition-all duration-300">
-              <Link to="/people">people</Link>
-            </li>
-            <li className="hover:text-rose-600 transition-all duration-300">
-              <Link to="/more">More</Link>
-            </li>
+            {menuItems.map((item, index) => (
+              <li key={index} className="hover:text-rose-600 transition-all duration-300">
+                <Link to={item.path}>{item.name}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="hidden md:block ml-auto uppercase">
@@ -64,26 +76,17 @@ export const Navigation = () => {
         </div>
       </nav>
 
-      <div className={`z- transition-all duration-500${
-            isHideMenu
-              ? " hidden "
-              : "opacity-100"
-          }`}>
-        <ul
-          className="bg-slate-900 border-t-2 border-slate-400 text-center text-slate-200 py-4"
-          >
-          <li className="hover:text-rose-600 py-2">
-            <Link to="/">Movie</Link>
-          </li>
-          <li className="hover:text-rose-600 py-2">
-            <Link to="/tvshows">Tvshows</Link>
-          </li>
-          <li className="hover:text-rose-600 py-2">
-            <Link href="/people">people</Link>
-          </li>
-          <li className="hover:text-rose-600 py-2">
-            <a href="#">More</a>
-          </li>
+      <div
+        className={`z- transition-all duration-500${
+          isHideMenu ? " hidden " : "opacity-100"
+        }`}
+      >
+        <ul className="bg-slate-900 border-t-2 border-slate-400 text-center text-slate-200 py-4">
+          {menuItems.map((item, index) => (
+              <li key={index} className="hover:text-rose-600 py-2 transition-all duration-300">
+                <Link to={item.path}>{item.name.toUpperCase()}</Link>
+              </li>
+            ))}
           <li className="py-4">
             <a
               className="bg-rose-700 hover:bg-rose-600 px-6 py-3 rounded-2xl text-white"
