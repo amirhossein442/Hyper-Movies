@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const Navigation = () => {
   const [isHideMenu, setIsHideMenu] = useState("false");
@@ -22,21 +22,25 @@ export const Navigation = () => {
     },
   ];
 
+  const isActiveClass = ({isActive})=> {
+    return isActive ? "text-rose-400" : "null"
+  }
+
   return (
     <>
       <nav className="flex items-center text-slate-200 bg-slate-900 px-6 pt-6 md:bg-transparent ">
         <div className="flex items-center">
-          <Link to={"/"}>
+          <NavLink to={"/"}>
             <h1 className="text-2xl mr-12 pb-2">
               Hyper<span className="text-rose-600 font-bold">Movies</span>
               <p className="text-xs text-center text-slate-400">Film review</p>
             </h1>
-          </Link>
+          </NavLink>
 
           <ul className="hidden md:flex gap-6 uppercase">
             {menuItems.map((item, index) => (
               <li key={index} className="hover:text-rose-600 transition-all duration-300">
-                <Link to={item.path}>{item.name}</Link>
+                <NavLink className={isActiveClass} to={item.path}>{item.name}</NavLink>
               </li>
             ))}
           </ul>
@@ -84,7 +88,7 @@ export const Navigation = () => {
         <ul className="bg-slate-900 border-t-2 border-slate-400 text-center text-slate-200 py-4">
           {menuItems.map((item, index) => (
               <li key={index} className="hover:text-rose-600 py-2 transition-all duration-300">
-                <Link to={item.path}>{item.name.toUpperCase()}</Link>
+                <NavLink className={isActiveClass} to={item.path} onClick={()=> setIsHideMenu("false")}>{item.name.toUpperCase()}</NavLink>
               </li>
             ))}
           <li className="py-4">
