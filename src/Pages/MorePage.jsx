@@ -27,8 +27,6 @@ export const MorePage = () => {
           </div>
         </div>
       </header>
-
-      
     </div>
   );
 }

@@ -3,10 +3,15 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export const PeoplePage = () => {
-    const[character, setCharacter] = useState([])
-    useEffect(()=> {
-        
-    },[])
+  const [character, setCharacter] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.themoviedb.org/3/person/popular?api_key=c749ba85a95fb5a1032d6cc9d8bf39a0&language=en-US&page=2"
+      )
+      .then((res) => setCharacter(res.data.results));
+  }, []);
+  console.log(character);
   return (
     <div className="bg-[rgb(2_13_24)] ">
       <header
@@ -32,8 +37,18 @@ export const PeoplePage = () => {
           </div>
         </div>
       </header>
-
-      
+      <div className="sm:px-52 lg:px-64 py-24 ">
+        {character.map((people, index) => (
+          <div key={index} className="flex border-4 border-rose-800 mb-5 text-white">
+            <img
+              className="w-32 h-32 rounded-sm object-cover "
+              src={`https://image.tmdb.org/t/p/w300${people.profile_path}`}
+              alt={people.name}
+            />
+            <p className="ml-5 mt-3">{people.name}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
