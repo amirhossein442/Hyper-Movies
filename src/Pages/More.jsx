@@ -6,6 +6,7 @@ export const More = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [headerBg, setHeaderBg] = useState("");
+  const [liked, setLiked] = useState(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -19,6 +20,14 @@ export const More = () => {
       });
   }, []);
   
+  const handelLiked = ()=> {
+    setLiked(!liked)
+
+    setTimeout(()=> {
+      setLiked(false)
+    },2000)
+  }
+
   return (
     <div>
       <header
@@ -53,7 +62,9 @@ export const More = () => {
                     {movie.overview}
                   </h3>
                   <div className="flex items-center ">
-                    <button className="mt-5 border py-3 px-3 border-rose-500 rounded-full">
+                    <button
+                      onClick={handelLiked}
+                     className="mt-5 border py-3 px-3 border-rose-500 rounded-full">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -69,6 +80,7 @@ export const More = () => {
                       </svg>
                     </button>
                     <p className="text-rose-500 ml-3 mt-3">LIKE</p>
+                    {liked && <p className="ml-5 mt-3 p-1 px-3 text-white bg-rose-700 rounded-lg">Liked</p>}
                   </div>
 
                   <span className="flex bottom-5 items-center ">

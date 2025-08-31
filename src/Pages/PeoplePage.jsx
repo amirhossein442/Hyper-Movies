@@ -37,15 +37,16 @@ export const PeoplePage = () => {
           </div>
         </div>
       </header>
-      <div className="sm:px-52 lg:px-64 py-24 ">
+      <div className="px-16 sm:px-96 py-24 ">
         {character.map((people, index) => (
-          <div key={index} className="flex border-4 border-rose-800 mb-5 text-white">
+          <div key={index} className="flex border-2 border-rose-600 mb-5 text-white">
             <img
-              className="w-32 h-32 rounded-sm object-cover "
+              className="w-32 h-32 object-cover "
               src={`https://image.tmdb.org/t/p/w300${people.profile_path}`}
               alt={people.name}
             />
             <p className="ml-5 mt-3">{people.name}</p>
+            
           </div>
         ))}
       </div>
