@@ -20,14 +20,14 @@ export const More = () => {
       });
   }, []);
   
-  const handelLiked = ()=> {
+  const handelLiked = (m)=> {
     setLiked(!liked)
 
     setTimeout(()=> {
       setLiked(false)
     },2000)
   }
-
+  console.log(movie)
   return (
     <div>
       <header
@@ -80,7 +80,7 @@ export const More = () => {
                       </svg>
                     </button>
                     <p className="text-rose-500 ml-3 mt-3">LIKE</p>
-                    {liked && <p className="ml-5 mt-3 p-1 px-3 text-white bg-rose-700 rounded-lg">Liked</p>}
+                    {liked && <p className="ml-5 mt-4 p-1 px-3 text-white bg-rose-600 rounded-lg"> Add to Favorite</p>}
                   </div>
 
                   <span className="flex bottom-5 items-center ">
