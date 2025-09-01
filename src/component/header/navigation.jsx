@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 
 export const Navigation = () => {
   const [isHideMenu, setIsHideMenu] = useState("false");
-  const location = useLocation()
+  const location = useLocation();
   const menuItems = [
     {
       path: "/",
@@ -23,13 +23,13 @@ export const Navigation = () => {
     },
     {
       path: "/favoritelike",
-      name:"Favorites"
-    }
+      name: "Favorites",
+    },
   ];
 
-  const isActiveClass = ({isActive})=> {
-    return isActive ? "text-rose-400" : "null"
-  }
+  const isActiveClass = ({ isActive }) => {
+    return isActive ? "text-rose-400" : "null";
+  };
 
   return (
     <>
@@ -42,20 +42,23 @@ export const Navigation = () => {
             </h1>
           </NavLink>
 
-          <ul className="hidden md:flex gap-6 uppercase">
+          <ul className="hidden lg:flex gap-6 uppercase">
             {menuItems.map((item, index) => (
-              <li key={index} className="hover:text-rose-600 transition-all duration-300">
-                <NavLink className={isActiveClass} to={item.path}>{item.name}</NavLink>
+              <li
+                key={index}
+                className="hover:text-rose-600 transition-all duration-300"
+              >
+                <NavLink className={isActiveClass} to={item.path}>
+                  {item.name}
+                </NavLink>
               </li>
             ))}
           </ul>
         </div>
-        <div className="hidden md:block ml-auto uppercase">
+        <div className="hidden lg:block ml-auto uppercase">
           <ul className="flex gap-8">
             <li>
-              <a href="#" className="md:hidden lg:block">
-                Login
-              </a>
+              <a href="#">Login</a>
             </li>
             <li>
               <a
@@ -67,7 +70,7 @@ export const Navigation = () => {
             </li>
           </ul>
         </div>
-        <div className="md:hidden ml-auto">
+        <div className="lg:hidden ml-auto">
           <button onClick={() => setIsHideMenu(!isHideMenu)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -90,20 +93,34 @@ export const Navigation = () => {
           isHideMenu ? " hidden " : "opacity-100"
         }`}
       >
-        <ul className="bg-slate-900 border-t-2 border-slate-400 text-center text-slate-200 py-4">
+        <ul className="bg-slate-900 border-t-2 border-slate-500 text-center text-slate-200 py-4">
           {menuItems.map((item, index) => (
-              <li key={index} className="hover:text-rose-600 py-2 transition-all duration-300">
-                <NavLink className={isActiveClass} to={item.path} onClick={()=> setIsHideMenu("false")}>{item.name.toUpperCase()}</NavLink>
-              </li>
-            ))}
-          <li className="py-4">
-            <a
-              className="bg-rose-700 hover:bg-rose-600 px-6 py-3 rounded-2xl text-white"
-              href="#"
+            <li
+              key={index}
+              className="hover:text-rose-600 py-2 transition-all duration-300"
             >
-              Sign up
-            </a>
-          </li>
+              <NavLink
+                className={isActiveClass}
+                to={item.path}
+                onClick={() => setIsHideMenu("false")}
+              >
+                {item.name.toUpperCase()}
+              </NavLink>
+            </li>
+          ))}
+          <div className="flex justify-center items-center pt-1 gap-4 border-t-2 border-slate-600">
+            <li className="py-4">
+              <a
+                className="bg-rose-700 hover:bg-rose-600 px-6 py-3 rounded-2xl text-white"
+                href="#"
+              >
+                Sign up
+              </a>
+            </li>
+            <li>
+              <a href="#">Login</a>
+            </li>
+          </div>
         </ul>
       </div>
     </>

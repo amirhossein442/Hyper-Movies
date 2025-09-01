@@ -50,7 +50,7 @@ export const SlideMovie2 = () => {
                 className="w-[400px] h-[280px] sm:w-full object-fill rounded"
                 src={`https://image.tmdb.org/t/p/w300${movie2.poster_path}`}
               />
-              <div className=" absolute inset-0 bg-gradient-to-b from-slate-800/30 hover:from-slate-900 to-slate-900/60 hover:to-rose-500/60"></div>
+              <div className=" absolute inset-0 bg-gradient-to-b from-slate-600/10 hover:from-black/50 to-slate-900/60 hover:to-rose-500/50"></div>
 
               <div className="absolute bottom-14 left-5 flex-column text-2xl text-white">
                 <span className="flex items-center gap-2">
