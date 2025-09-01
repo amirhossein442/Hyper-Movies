@@ -23,9 +23,6 @@ export const More = () => {
         setHeaderBg(res.data.backdrop_path);
       });
   }, []);
-  useEffect(()=> {
-    console.log(addFavoriteMovie)
-  },[addFavoriteMovie])
   
   const handelLiked = (m)=> {
     setLiked(!liked)
@@ -88,7 +85,7 @@ export const More = () => {
                       </svg>
                     </button>
                     
-                    {liked ? <p className=" mt-4 p-1 px-3 text-rose-600 text-xl font-bold rounded-lg"> Remove to Favorite</p> : <p className=" mt-4 p-1 px-3 text-rose-600 text-xl font-bold rounded-lg"> Add to Favorite</p>}
+                    {liked ? <p className=" mt-4 p-1 px-3 text-rose-600 sm:text-xl font-bold rounded-lg"> Remove to Favorite</p> : <p className=" mt-4 p-1 px-3 text-rose-600  sm:text-xl font-bold rounded-lg"> Add to Favorite</p>}
                   </div>
 
                   <span className="flex bottom-5 items-center ">

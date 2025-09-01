@@ -1,11 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { LoginContext } from "../../Context/LoginContext";
 
 export const SlideMovie = () => {
   const [movies, setMovies] = useState([]);
+  
   useEffect(() => {
     axios
       .get(

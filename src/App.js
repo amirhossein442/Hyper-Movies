@@ -10,6 +10,7 @@ import { PeoplePage } from "./Pages/PeoplePage";
 import { SearchPage } from "./Pages/SearchPage";
 import { MorePage } from "./Pages/MorePage";
 import { FavoriteLikePage } from "./Pages/FavoriteLikePage";
+import { LoginPage } from "./Pages/LoginPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/more/:id" element={< More />}/>
         <Route path="/favoritelike" element={< FavoriteLikePage />}/>
         <Route path="/people" element={<PeoplePage />}/>
+        <Route path="/login" element={<LoginPage />}/>
       </Routes>
       <Footer />
     </Router>

@@ -1,17 +1,19 @@
-
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import 'swiper/css/pagination';
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "swiper/css/pagination";
 import "swiper/css";
-import { FavoriteMovieContextProvider } from './Context/FavoriteMovieContext';
+import { FavoriteMovieContextProvider } from "./Context/FavoriteMovieContext";
+import { LoginContext, LoginContextProvider } from "./Context/LoginContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  <LoginContextProvider>
     <FavoriteMovieContextProvider>
-        <App />
+      <App />
     </FavoriteMovieContextProvider>
+  </LoginContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

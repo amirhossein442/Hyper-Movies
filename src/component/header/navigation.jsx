@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { LoginContext } from "../../Context/LoginContext";
 
 export const Navigation = () => {
+  const { setProfile, profile } = useContext(LoginContext);
   const [isHideMenu, setIsHideMenu] = useState("false");
   const location = useLocation();
   const menuItems = [
@@ -58,7 +60,7 @@ export const Navigation = () => {
         <div className="hidden lg:block ml-auto uppercase">
           <ul className="flex gap-8">
             <li>
-              <a href="#">Login</a>
+              <Link to={"/login"}>Login</Link>
             </li>
             <li>
               <a
@@ -69,7 +71,12 @@ export const Navigation = () => {
               </a>
             </li>
           </ul>
+          
         </div>
+        <div className="text-white ml-4 w-30">
+              <p>{profile.firstName}</p>
+              <p>{profile.lastName}</p>
+            </div>
         <div className="lg:hidden ml-auto">
           <button onClick={() => setIsHideMenu(!isHideMenu)}>
             <svg
@@ -86,6 +93,7 @@ export const Navigation = () => {
             </svg>
           </button>
         </div>
+        
       </nav>
 
       <div
@@ -118,7 +126,7 @@ export const Navigation = () => {
               </a>
             </li>
             <li>
-              <a href="#">Login</a>
+              <Link to={"/login"}>Login</Link>
             </li>
           </div>
         </ul>

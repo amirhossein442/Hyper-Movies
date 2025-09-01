@@ -6,10 +6,6 @@ export const FavoriteLikePage = () => {
   const { addFavoriteMovie } = useContext(FavoriteMovieContext);
   const [headerBg, setHeaderBg] = useState("/images/bg-cinema.jpg");
 
-  useEffect(() => {
-    console.log(addFavoriteMovie);
-  }, [addFavoriteMovie]);
-
   return (
     <div>
       <header
