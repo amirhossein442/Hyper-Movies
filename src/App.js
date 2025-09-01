@@ -9,6 +9,7 @@ import { More } from "./Pages/More";
 import { PeoplePage } from "./Pages/PeoplePage";
 import { SearchPage } from "./Pages/SearchPage";
 import { MorePage } from "./Pages/MorePage";
+import { FavoriteLikePage } from "./Pages/FavoriteLikePage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/search" element={<SearchPage />}/>
         <Route path="/more" element={< MorePage />}/>
         <Route path="/more/:id" element={< More />}/>
+        <Route path="/favoritelike" element={< FavoriteLikePage />}/>
         <Route path="/people" element={<PeoplePage />}/>
       </Routes>
       <Footer />

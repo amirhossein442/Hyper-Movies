@@ -21,6 +21,10 @@ export const Navigation = () => {
       path: "/more",
       name: "More",
     },
+    {
+      path: "/favoritelike",
+      name:"Favorites"
+    }
   ];
 
   const isActiveClass = ({isActive})=> {

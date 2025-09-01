@@ -1,8 +1,12 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { FavoriteMovieContext } from "../Context/FavoriteMovieContext";
+
+
 
 export const More = () => {
+  const {addFavoriteMovie,setAddFavoriteMovie} = useContext(FavoriteMovieContext)
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [headerBg, setHeaderBg] = useState("");
@@ -19,22 +23,26 @@ export const More = () => {
         setHeaderBg(res.data.backdrop_path);
       });
   }, []);
+  useEffect(()=> {
+    console.log(addFavoriteMovie)
+  },[addFavoriteMovie])
   
   const handelLiked = (m)=> {
     setLiked(!liked)
-
-    setTimeout(()=> {
-      setLiked(false)
-    },2000)
+    if (addFavoriteMovie.find(movie => movie.id === m.id)){
+      setAddFavoriteMovie(addFavoriteMovie.filter(movie => movie.id !== m.id))
+    }else{
+      setAddFavoriteMovie([...addFavoriteMovie, m])
+    }
   }
-  console.log(movie)
+
   return (
     <div>
       <header
         className="md:px-1 "
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0 0 0 / 100%), 
-          rgb(2 13 24/ 44%), rgb(0 0 0/ 100%)),
+          rgb(2 13 24/ 54%), rgb(0 0 0/ 100%)),
           url(https://image.tmdb.org/t/p/w780${headerBg})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -58,12 +66,12 @@ export const More = () => {
                       {movie.release_date}
                     </span>
                   </h2>
-                  <h3 className=" hidden sm:block text-slate-300 mt-5 w-40 sm:w-full text-sm leading-6 sm:text-xl sm:leading-8">
+                  <h3 className="  text-slate-300 mt-5 w-30 sm:w-full text-sm leading-6 sm:text-xl sm:leading-8">
                     {movie.overview}
                   </h3>
                   <div className="flex items-center ">
                     <button
-                      onClick={handelLiked}
+                      onClick={()=> handelLiked(movie)}
                      className="mt-5 border py-3 px-3 border-rose-500 rounded-full">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -79,8 +87,8 @@ export const More = () => {
                         />
                       </svg>
                     </button>
-                    <p className="text-rose-500 ml-3 mt-3">LIKE</p>
-                    {liked && <p className="ml-5 mt-4 p-1 px-3 text-white bg-rose-600 rounded-lg"> Add to Favorite</p>}
+                    
+                    {liked ? <p className=" mt-4 p-1 px-3 text-rose-600 text-xl font-bold rounded-lg"> Remove to Favorite</p> : <p className=" mt-4 p-1 px-3 text-rose-600 text-xl font-bold rounded-lg"> Add to Favorite</p>}
                   </div>
 
                   <span className="flex bottom-5 items-center ">
@@ -90,16 +98,16 @@ export const More = () => {
                           key={index}
                           xmlns="http://www.w3.org/2000/svg"
                           fill="gold"
-                          className="mt-5 w-5 h-5 lg:w-8 lg:h-8"
+                          className="mt-5 w-3 h-5 lg:w-8 lg:h-8"
                           viewBox="0 0 16 16"
                         >
                           <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                         </svg>
                       )
                     )}
-                    <span className="text-white ml-2 hidden sm:block">
+                    <span className="hidden sm:block text-white ml-2 ">
                       {Math.round(movie.vote_average)}
-                      <span className=""> /10</span>
+                      <span > /10</span>
                     </span>
                   </span>
                 </div>

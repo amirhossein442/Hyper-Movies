@@ -11,7 +11,6 @@ export const PeoplePage = () => {
       )
       .then((res) => setCharacter(res.data.results));
   }, []);
-  console.log(character);
   return (
     <div className="bg-[rgb(2_13_24)] ">
       <header
