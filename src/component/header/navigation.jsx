@@ -71,12 +71,17 @@ export const Navigation = () => {
               </a>
             </li>
           </ul>
-          
         </div>
-        <div className="text-white ml-4 w-30">
-              <p>{profile.firstName}</p>
-              <p>{profile.lastName}</p>
-            </div>
+        <Link to={"/login"} className="text-white ml-4 w-30  items-center ">
+          <img
+            src={profile.pictureProf}
+            className=" rounded-full w-16 h-16 object-cover "
+          />
+          <p className="flex justify-center w-14 text-sm ">
+            {profile.firstName}
+            <span className="ml-1">{profile.lastName}</span>
+          </p>
+        </Link>
         <div className="lg:hidden ml-auto">
           <button onClick={() => setIsHideMenu(!isHideMenu)}>
             <svg
@@ -93,7 +98,6 @@ export const Navigation = () => {
             </svg>
           </button>
         </div>
-        
       </nav>
 
       <div
