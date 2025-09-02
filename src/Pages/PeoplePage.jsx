@@ -36,7 +36,7 @@ export const PeoplePage = () => {
           </div>
         </div>
       </header>
-      <div className="px-16 sm:px-96 py-24 ">
+      <div className="px-16 lg:px-96 py-24 ">
         {character.map((people, index) => (
           <div key={index} className="flex border-2 border-rose-600 mb-5 text-white">
             <img
