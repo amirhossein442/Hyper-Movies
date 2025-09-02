@@ -8,10 +8,6 @@ export const Navigation = () => {
   const location = useLocation();
   const menuItems = [
     {
-      path: "/",
-      name: "Movie",
-    },
-    {
       path: "/tvshows",
       name: "Tvshows",
     },
@@ -35,7 +31,7 @@ export const Navigation = () => {
 
   return (
     <>
-      <nav className="flex items-center text-slate-200 bg-black px-6 pt-6 md:bg-transparent ">
+      <nav className="flex items-center text-slate-200 justify-between bg-black px-6 pt-6 md:bg-transparent ">
         <div className="flex items-center">
           <NavLink to={"/"}>
             <h1 className="text-2xl mr-12 pb-2">
@@ -57,31 +53,48 @@ export const Navigation = () => {
             ))}
           </ul>
         </div>
-        <div className="hidden lg:block ml-auto uppercase">
-          <ul className="flex gap-8">
-            <li>
-              <Link to={"/login"}>Login</Link>
-            </li>
-            <li>
-              <a
-                className="bg-rose-700 hover:bg-rose-600 px-6 py-3 rounded-2xl text-white"
-                href="#"
-              >
-                Sign up
-              </a>
-            </li>
-          </ul>
-        </div>
-        <Link to={"/login"} className="text-white ml-4 w-30  items-center ">
-          <img
-            src={profile.pictureProf}
-            className=" rounded-full w-16 h-16 object-cover "
-          />
-          <p className="flex justify-center w-14 text-sm ">
-            {profile.firstName}
-            <span className="ml-1">{profile.lastName}</span>
-          </p>
-        </Link>
+        {profile.firstName ? (
+          <Link
+            to={"/login"}
+            className="text-white lg:ml-4 w-30  items-center"
+          >
+            {profile.pictureProf ? (
+              <img
+                src={profile.pictureProf}
+                className=" rounded-full w-16 h-16 object-cover "
+                alt={profile.firstName}
+              />
+            ) : (
+              <img
+                src="images/profile.jpg"
+                alt={profile.firstName}
+                className=" rounded-full w-16 h-16 object-cover "
+              />
+            )}
+
+            <p className="flex justify-center w-14 text-sm ">
+              {profile.firstName}
+              <span className="ml-1">{profile.lastName}</span>
+            </p>
+          </Link>
+        ) : (
+          <div className="hidden lg:block ml-auto uppercase">
+            <ul className="flex gap-8">
+              <li>
+                <Link to={"/login"}>Login</Link>
+              </li>
+              <li>
+                <a
+                  className="bg-rose-700 hover:bg-rose-600 px-6 py-3 rounded-2xl text-white mr-5"
+                  href="#"
+                >
+                  Sign up
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
+
         <div className="lg:hidden ml-auto">
           <button onClick={() => setIsHideMenu(!isHideMenu)}>
             <svg
