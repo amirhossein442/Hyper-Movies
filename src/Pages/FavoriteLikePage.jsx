@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const FavoriteLikePage = () => {
   const { addFavoriteMovie } = useContext(FavoriteMovieContext);
   const [headerBg, setHeaderBg] = useState("/images/bg-cinema.jpg");
-
+  console.log(addFavoriteMovie);
   return (
     <div>
       <header
@@ -33,22 +33,28 @@ export const FavoriteLikePage = () => {
       </header>
 
       <div className="bg-slate-900 ">
-        <div className="container mx-auto grid sm:grid-cols-4 gap-10 pb-40 py-10 px-5">
-          {addFavoriteMovie.map((movie, index) => (
-            <Link to={`/more/${movie.id}`} key={index} className="">
-              <img
-                className=""
-                src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-              />
-              <h2 className=" text-white text-xl ">
-                {movie.title}
-                <span className="hidden sm:block text-slate-300 text-base ml-4">
-                  {movie.release_date}
-                </span>
-              </h2>
-            </Link>
-          ))}
-        </div>
+        {addFavoriteMovie.length ? (
+          <div className="container mx-auto grid sm:grid-cols-4 gap-10 pb-40 py-10 px-5">
+            {addFavoriteMovie.map((movie, index) => (
+              <Link to={`/more/${movie.id}`} key={index} className="">
+                <img
+                  className=""
+                  src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                />
+                <h2 className=" text-white text-xl ">
+                  {movie.title}
+                  <span className="hidden sm:block text-slate-300 text-base ml-4">
+                    {movie.release_date}
+                  </span>
+                </h2>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <h1 className="text-white flex justify-center py-10 text-4xl font-bold">
+            Favorites are empty.
+          </h1>
+        )}
       </div>
     </div>
   );

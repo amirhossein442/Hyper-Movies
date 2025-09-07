@@ -38,7 +38,7 @@ export const PeoplePage = () => {
       </header>
       <div className="px-16 lg:px-96 py-24 ">
         {character.map((people, index) => (
-          <div key={index} className="flex border-2 border-rose-600 mb-5 text-white">
+          <div key={index} className="flex border-2 border-rose-600 bg-rose-900 backdrop-blur-lg mb-5 text-white">
             <img
               className="w-32 h-32 object-cover "
               src={`https://image.tmdb.org/t/p/w300${people.profile_path}`}

@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import "swiper/css/pagination";
 import "swiper/css";
 import { FavoriteMovieContextProvider } from "./Context/FavoriteMovieContext";
-import { LoginContext, LoginContextProvider } from "./Context/LoginContext";
+import { LoginContextProvider } from "./Context/LoginContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -3,9 +3,10 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { LoginContext } from "../../Context/LoginContext";
 
 export const Navigation = () => {
-  const { setProfile, profile } = useContext(LoginContext);
+  const { profile, showProfile, session } = useContext(LoginContext);
   const [isHideMenu, setIsHideMenu] = useState("false");
   const location = useLocation();
+
   const menuItems = [
     {
       path: "/tvshows",
@@ -53,28 +54,24 @@ export const Navigation = () => {
             ))}
           </ul>
         </div>
-        {profile.firstName ? (
-          <Link
-            to={"/login"}
-            className="text-white lg:ml-4 w-30  items-center"
-          >
-            {profile.pictureProf ? (
+        {session ? (
+          <Link to={"/login"} className="text-white lg:ml-4 w-30  items-center">
+            {profile.avatar?.tmdb.avatar_path ? (
               <img
-                src={profile.pictureProf}
+                src={`https://image.tmdb.org/t/p/w300${profile.avatar?.tmdb.avatar_path}`}
                 className=" rounded-full w-16 h-16 object-cover "
-                alt={profile.firstName}
+                alt={profile.userName}
               />
             ) : (
               <img
                 src="images/profile.jpg"
-                alt={profile.firstName}
+                alt={profile.username}
                 className=" rounded-full w-16 h-16 object-cover "
               />
             )}
 
             <p className="flex justify-center w-14 text-sm ">
-              {profile.firstName}
-              <span className="ml-1">{profile.lastName}</span>
+              {profile.username}
             </p>
           </Link>
         ) : (
