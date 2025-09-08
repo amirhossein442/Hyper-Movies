@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { LoginContext } from "../../Context/LoginContext";
 
 export const Navigation = () => {
-  const { profile, showProfile, session } = useContext(LoginContext);
+  const { profile, session } = useContext(LoginContext);
   const [isHideMenu, setIsHideMenu] = useState("false");
   const location = useLocation();
 

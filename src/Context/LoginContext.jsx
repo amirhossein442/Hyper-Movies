@@ -50,7 +50,7 @@ export const LoginContextProvider = ({ children }) => {
       );
       setSession(session.data.session_id);
       localStorage.setItem("session", session.data.session_id);
-      toast.success("Successfully toasted!");
+      toast.success("Successfully logged in!");
       setShowProfile(true);
     } catch (error) {
       toast.error("Invalid username and password");
@@ -58,9 +58,16 @@ export const LoginContextProvider = ({ children }) => {
     }
   }
 
+  function logOut() {
+    setSession(null);
+    localStorage.removeItem("session");
+    toast.success("Successfully logged out!");
+    setShowProfile(false);
+  }
+
   return (
     <LoginContext.Provider
-      value={{ profile, setProfile, login, showProfile, session }}
+      value={{ profile, setProfile, login, showProfile, session, logOut }}
     >
       {children}
       <Toaster />

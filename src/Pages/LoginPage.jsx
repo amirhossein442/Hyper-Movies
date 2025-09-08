@@ -5,20 +5,19 @@ import { Link } from "react-router-dom";
 export const LoginPage = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [ setPictureProf] = useState("");
-  const { login } = useContext(LoginContext);
-
+  const { login, logOut, session, profile } = useContext(LoginContext);
+  console.log(profile);
   const handelSubmit = (e) => {
     e.preventDefault();
-    login(userName,password)
+    login(userName, password);
   };
 
-  const handelPicProf = (e) => {
-    const pic = e.target.files[0];
-    if (pic) {
-      setPictureProf(URL.createObjectURL(pic));
-    }
-  };
+  function handelLogOut() {
+    setUserName("");
+    setPassword("");
+    logOut();
+  }
+
   return (
     <div className="bg-slate-900 ">
       <header
@@ -32,31 +31,47 @@ export const LoginPage = () => {
           objectFit: "top",
         }}
       >
-        <form
-          onSubmit={handelSubmit}
-          className="container mx-auto flex  items-center justify-center flex-col py-12  gap-4 w-2/4 border-2 border-slate-700 rounded-3xl backdrop-blur-md"
-        >
-          <input
-            className="w-3/4 h-14  rounded-sm bg-transparent border-4 border-rose-700 outline-none text-white  border-t-0 border-l-0 border-r-0 text-2xl "
-            type="text"
-            placeholder="User name..."
-            onChange={(e) => setUserName(e.target.value)}
-            value={userName}
-          />
-          <input
-            className="w-3/4 h-14  rounded-sm bg-transparent border-4 border-rose-700 outline-none text-white  border-t-0 border-l-0 border-r-0 text-2xl"
-            type="password"
-            placeholder="Password..."
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-          />
-          <button
-            type="submit"
-            className=" bg-rose-700 hover:bg-rose-600 transition-all py-3 mt-10 rounded-2xl font-bold text-white w-3/4 md:w-1/4 flex items-center justify-center mb-3 "
+        {session ? (
+          <div className="container mx-auto flex  items-center justify-center  flex-col pb-96">
+            <h1 className="text-white mb-10 text-2xl sm:text-3xl md:text-5xl">
+              <span className="text-rose-600 font-bold">Welcome</span>{" "}
+              {profile.username}
+            </h1>
+            <button
+              type="button"
+              className=" bg-rose-700 hover:bg-rose-600 transition-all py-3 rounded-2xl font-bold text-white w-1/4 flex items-center justify-center mb-3"
+              onClick={handelLogOut}
+            >
+              Log Out
+            </button>
+          </div>
+        ) : (
+          <form
+            onSubmit={handelSubmit}
+            className="container mx-auto flex items-center justify-center flex-col py-12 mb-96 gap-4 w-2/4 border-2 border-slate-700 rounded-3xl backdrop-blur-md"
           >
-            Login
-          </button>
-        </form>
+            <input
+              className="w-3/4 h-14  rounded-sm bg-transparent border-4 border-rose-700 outline-none text-white  border-t-0 border-l-0 border-r-0 sm:text-2xl "
+              type="text"
+              placeholder="User name..."
+              onChange={(e) => setUserName(e.target.value)}
+              value={userName}
+            />
+            <input
+              className="w-3/4 h-14  rounded-sm bg-transparent border-4 border-rose-700 outline-none text-white  border-t-0 border-l-0 border-r-0 sm:text-2xl"
+              type="password"
+              placeholder="Password..."
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+            />
+            <button
+              type="submit"
+              className=" bg-rose-700 hover:bg-rose-600 transition-all py-3 mt-10 rounded-2xl font-bold text-white w-3/4 md:w-1/4 flex items-center justify-center mb-3 "
+            >
+              Login
+            </button>
+          </form>
+        )}
       </header>
     </div>
   );
