@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 export const FavoriteLikePage = () => {
   const { addFavoriteMovie } = useContext(FavoriteMovieContext);
-  const [headerBg, setHeaderBg] = useState("/images/bg-cinema.jpg");
   console.log(addFavoriteMovie);
   return (
     <div>

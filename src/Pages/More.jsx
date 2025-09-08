@@ -23,13 +23,18 @@ export const More = () => {
         setHeaderBg(res.data.backdrop_path);
       });
   }, []);
+
   
   const handelLiked = (m)=> {
     setLiked(!liked)
     if (addFavoriteMovie.find(movie => movie.id === m.id)){
-      setAddFavoriteMovie(addFavoriteMovie.filter(movie => movie.id !== m.id))
+      const update =addFavoriteMovie.filter(movie => movie.id !== m.id)
+      setAddFavoriteMovie(update)
+      localStorage.setItem("favoriteMovies", JSON.stringify(update))
     }else{
-      setAddFavoriteMovie([...addFavoriteMovie, m])
+      const update =[...addFavoriteMovie, m]
+      setAddFavoriteMovie(update)
+      localStorage.setItem("favoriteMovies", JSON.stringify(update))
     }
   }
 
