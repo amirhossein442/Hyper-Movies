@@ -52,7 +52,7 @@ export const More = () => {
           value: rating,
         }
       );
-      toast.success("Successfully rated!");
+      toast.success("Movie rating added!");
     } catch (errore) {
       toast.error("This didn't work.");
     }
