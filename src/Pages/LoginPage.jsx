@@ -6,7 +6,6 @@ export const LoginPage = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const { login, logOut, session, profile } = useContext(LoginContext);
-  console.log(profile);
   const handelSubmit = (e) => {
     e.preventDefault();
     login(userName, password);

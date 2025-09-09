@@ -9,16 +9,16 @@ export const Navigation = () => {
 
   const menuItems = [
     {
+      path: "/",
+      name: "Movie",
+    },
+    {
       path: "/tvshows",
       name: "Tvshows",
     },
     {
       path: "/people",
       name: "People",
-    },
-    {
-      path: "/more",
-      name: "More",
     },
     {
       path: "/favoritelike",
@@ -81,12 +81,12 @@ export const Navigation = () => {
                 <Link to={"/login"}>Login</Link>
               </li>
               <li>
-                <a
+                <Link
                   className="bg-rose-700 hover:bg-rose-600 px-6 py-3 rounded-2xl text-white mr-5"
-                  href="#"
+                  to={"/login"}
                 >
                   Sign up
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -132,12 +132,12 @@ export const Navigation = () => {
           ))}
           <div className="flex justify-center items-center pt-1 gap-4 border-t-2 border-slate-600">
             <li className="py-4">
-              <a
+              <Link
                 className="bg-rose-700 hover:bg-rose-600 px-6 py-3 rounded-2xl text-white"
-                href="#"
+                to={"/login"}
               >
                 Sign up
-              </a>
+              </Link>
             </li>
             <li>
               <Link to={"/login"}>Login</Link>

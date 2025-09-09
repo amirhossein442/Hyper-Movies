@@ -8,7 +8,6 @@ import { TvShowsPage } from "./Pages/TvShowsPage";
 import { More } from "./Pages/More";
 import { PeoplePage } from "./Pages/PeoplePage";
 import { SearchPage } from "./Pages/SearchPage";
-import { MorePage } from "./Pages/MorePage";
 import { FavoriteLikePage } from "./Pages/FavoriteLikePage";
 import { LoginPage } from "./Pages/LoginPage";
 
@@ -20,7 +19,6 @@ function App() {
         <Route path="/" element={<Main0 />}/>
         <Route path="/tvshows" element={< TvShowsPage />}/>
         <Route path="/search" element={<SearchPage />}/>
-        <Route path="/more" element={< MorePage />}/>
         <Route path="/more/:id" element={< More />}/>
         <Route path="/favoritelike" element={< FavoriteLikePage />}/>
         <Route path="/people" element={<PeoplePage />}/>
