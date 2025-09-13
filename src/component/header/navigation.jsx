@@ -17,10 +17,6 @@ export const Navigation = () => {
       name: "Tvshows",
     },
     {
-      path: "/people",
-      name: "People",
-    },
-    {
       path: "/favoritelike",
       name: "Favorites",
     },

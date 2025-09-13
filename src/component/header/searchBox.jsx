@@ -1,28 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 export const SearchBox = () => {
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
 
-  const handleSearch = (e) => {
-    if (e.key === "Enter") {
+  useEffect(() => {
+    if (searchValue.trim() !== "") {
       navigate(`/search?query=${encodeURIComponent(searchValue)}`);
     }
-  };
+  }, [searchValue]);
+
   return (
     <section className="pt-5 text-state-300">
-      <div to={"/search"} className="relative mt-0">
+      <div className="relative mt-0">
         <input
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
-          onKeyDown={handleSearch}
           type="text"
           className="w-full bg-slate-600 text-2xl p-2 border-4 border-slate-900 outline-none 
           placeholder:text-sm"
           placeholder="Search for a movie, series, or show..."
         />
         <button
-          onClick={()=> navigate(`/search?query=${encodeURIComponent(searchValue)}`)}
+          onClick={() =>
+            navigate(`/search?query=${encodeURIComponent(searchValue)}`)
+          }
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

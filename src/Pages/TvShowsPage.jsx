@@ -1,18 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useAxios } from "../hooks/axioshook";
 
 export const TvShowsPage = () => {
-  const [TvShoesMovie, setTvShoesMovie] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(
-        "https://api.themoviedb.org/3/movie/now_playing?api_key=c749ba85a95fb5a1032d6cc9d8bf39a0"
-      )
-      .then((res) => setTvShoesMovie(res.data.results));
-  }, []);
-
+  const [TvShoesMovie] = useAxios("movie/now_playing");
   return (
     <div className="bg-[rgb(2_13_24)] ">
       <header

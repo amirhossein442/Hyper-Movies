@@ -4,17 +4,11 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { LoginContext } from "../../Context/LoginContext";
+import { useAxios } from "../../hooks/axioshook";
 
 export const SlideMovie = () => {
-  const [movies, setMovies] = useState([]);
+  const [movies] = useAxios("movie/popular")
   
-  useEffect(() => {
-    axios
-      .get(
-        "https://api.themoviedb.org/3/movie/popular?api_key=c749ba85a95fb5a1032d6cc9d8bf39a0"
-      )
-      .then((res) => setMovies(res.data.results));
-  }, []);
   return (
     <div className="container lg:w-8/12 mr-20 mt-20">
       <h1 className="text-3xl font-bold text-white mb-5 ml-4 sm:ml-0">

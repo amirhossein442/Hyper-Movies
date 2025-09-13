@@ -60,9 +60,9 @@ export const LoginContextProvider = ({ children }) => {
 
   function logOut() {
     setSession(null);
+    setShowProfile(false);
     localStorage.removeItem("session");
     toast.success("Successfully logged out!");
-    setShowProfile(false);
   }
 
   return (

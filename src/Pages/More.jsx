@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import { data, Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { FavoriteMovieContext } from "../Context/FavoriteMovieContext";
 import toast from "react-hot-toast";
 
@@ -128,7 +128,7 @@ export const More = () => {
                     <div className="flex-col sm:flex-row">
                       <div className="flex">
                         <select
-                          className="ml-5 mt-4 h-10 bg-transparent text-rose-600 text-2xl "
+                          className="ml-5 mt-4 h-10 bg-transparent text-rose-600 text-2xl focus:outline-none"
                           onChange={(e) =>
                             handelRated(movie.id, parseFloat(e.target.value))
                           }

@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 import { TvShowsPage } from "./Pages/TvShowsPage";
 import { More } from "./Pages/More";
-import { PeoplePage } from "./Pages/PeoplePage";
 import { SearchPage } from "./Pages/SearchPage";
 import { FavoriteLikePage } from "./Pages/FavoriteLikePage";
 import { LoginPage } from "./Pages/LoginPage";
@@ -21,7 +20,6 @@ function App() {
         <Route path="/search" element={<SearchPage />}/>
         <Route path="/more/:id" element={< More />}/>
         <Route path="/favoritelike" element={< FavoriteLikePage />}/>
-        <Route path="/people" element={<PeoplePage />}/>
         <Route path="/login" element={<LoginPage />}/>
       </Routes>
       <Footer />

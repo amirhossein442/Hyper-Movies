@@ -12,11 +12,10 @@ export const LoginPage = () => {
   };
 
   function handelLogOut() {
-    setUserName("");
-    setPassword("");
+    setUserName("")
+    setPassword("")
     logOut();
   }
-
   return (
     <div className="bg-slate-900 ">
       <header

@@ -3,17 +3,10 @@ import { Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useAxios } from "../../hooks/axioshook";
 
 export const HeaderSlider = ({ setHeaderBg }) => {
-  const [movieHeader, setMovieHeader] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(
-        "https://api.themoviedb.org/3/movie/now_playing?api_key=c749ba85a95fb5a1032d6cc9d8bf39a0"
-      )
-      .then((res) => setMovieHeader(res.data.results));
-  }, []);
+  const [movies] = useAxios("movie/now_playing")
 
   return (
     <div className="container md:pb-24">
@@ -40,7 +33,7 @@ export const HeaderSlider = ({ setHeaderBg }) => {
         autoplay={{ delay: 3000 }}
         
       >
-        {movieHeader.map((movie, index) => (
+        {movies.map((movie, index) => (
           <SwiperSlide key={index}>
             <Link to={`/more/${movie.id}`}>
             <img
