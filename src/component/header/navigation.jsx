@@ -28,7 +28,7 @@ export const Navigation = () => {
 
   return (
     <>
-      <nav className="flex items-center text-slate-200 justify-between bg-black px-6 pt-6 md:bg-transparent ">
+      <nav className="flex items-center text-slate-200 justify-between   px-6 pt-6 md:bg-transparent ">
         <div className="flex items-center">
           <NavLink to={"/"}>
             <h1 className="text-2xl mr-12 pb-2">

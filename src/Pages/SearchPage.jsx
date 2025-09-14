@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
+import { Title } from "../component/Title";
 
 export const SearchPage = () => {
   const [movieSearch, setMovieSearch] = useState([]);
@@ -27,6 +28,7 @@ export const SearchPage = () => {
 
   return (
     <div className=" bg-slate-900 pb-40">
+      <Title>Searching</Title>
       {movieSearch.length === 0 ? (
         <p className="text-white text-3xl flex justify-center">IS NOT DEFIND</p>
       ) : (

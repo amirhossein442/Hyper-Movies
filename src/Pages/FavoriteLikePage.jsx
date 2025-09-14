@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { FavoriteMovieContext } from "../Context/FavoriteMovieContext";
 import { Link } from "react-router-dom";
+import { Title } from "../component/Title";
 
 export const FavoriteLikePage = () => {
   const { addFavoriteMovie } = useContext(FavoriteMovieContext);
@@ -28,6 +29,7 @@ export const FavoriteLikePage = () => {
             <p className="text-slate-300 ml-5">FAVORITE LISTING</p>
           </div>
         </div>
+        <Title>Faivorite</Title>
       </header>
 
       <div className="bg-[rgb(2_13_24)]">

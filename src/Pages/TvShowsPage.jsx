@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAxios } from "../hooks/axioshook";
+import { Title } from "../component/Title";
 
 export const TvShowsPage = () => {
   const [TvShoesMovie] = useAxios("movie/now_playing");
@@ -29,6 +30,7 @@ export const TvShowsPage = () => {
             <p className="text-slate-300 ml-5">TvSHOES LISTING</p>
           </div>
         </div>
+        <Title>Tv shows</Title>
       </header>
 
       <div className="container mx-auto px-10 pt-10 aspect-12/9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pb-24">

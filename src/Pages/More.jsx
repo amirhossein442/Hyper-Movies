@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FavoriteMovieContext } from "../Context/FavoriteMovieContext";
 import toast from "react-hot-toast";
+import { Title } from "../component/Title";
 
 export const More = () => {
   const { addFavoriteMovie, setAddFavoriteMovie } =
@@ -75,10 +76,11 @@ export const More = () => {
         <div className="container mx-auto">
           {movie ? (
             <div className="pb-60">
+              <Title>{movie.title}</Title>
               <div className="flex pt-10 justify-center">
                 <img
                   className="ml-10 mr-10 w-32 h-52 sm:w-full sm:h-auto lg:h-[500px] object-contain"
-                  src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
                   alt={movie.title}
                 />
                 <div>

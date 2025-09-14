@@ -3,6 +3,7 @@ import { FollowUs } from "../header/foloowUs";
 import { HeaderSlider } from "../header/headerSlider";
 import { Main1 } from "./main1";
 import { Main2 } from "./Main2";
+import { Title } from "../Title";
 
 export const Main0 = () => {
   const [headerBg, setHeaderBg] = useState("/images/bg-cinema.jpg");
@@ -23,6 +24,7 @@ export const Main0 = () => {
           <FollowUs />
           <HeaderSlider setHeaderBg={setHeaderBg} />
         </div>
+        <Title>Movie</Title>
       </header>
 
       <div className="container mx-auto ">

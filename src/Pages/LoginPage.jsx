@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { LoginContext } from "../Context/LoginContext";
 import { Link } from "react-router-dom";
+import { Title } from "../component/Title";
 
 export const LoginPage = () => {
   const [userName, setUserName] = useState("");
@@ -18,6 +19,7 @@ export const LoginPage = () => {
   }
   return (
     <div className="bg-slate-900 ">
+      <Title>Login</Title>
       <header
         className="md:px-1 py-10"
         style={{
