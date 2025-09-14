@@ -17,6 +17,7 @@ export const LoginPage = () => {
     setPassword("")
     logOut();
   }
+  
   return (
     <div className="bg-slate-900 ">
       <Title>Login</Title>

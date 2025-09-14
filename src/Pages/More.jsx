@@ -4,10 +4,12 @@ import { useParams } from "react-router-dom";
 import { FavoriteMovieContext } from "../Context/FavoriteMovieContext";
 import toast from "react-hot-toast";
 import { Title } from "../component/Title";
+import { LoginContext } from "../Context/LoginContext";
 
 export const More = () => {
   const { addFavoriteMovie, setAddFavoriteMovie } =
     useContext(FavoriteMovieContext);
+  const { session } = useContext(LoginContext);
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [headerBg, setHeaderBg] = useState("");
@@ -34,14 +36,18 @@ export const More = () => {
   }, []);
 
   const handelLiked = (m) => {
-    if (addFavoriteMovie.find((movie) => movie.id === m.id)) {
-      const update = addFavoriteMovie.filter((movie) => movie.id !== m.id);
-      setAddFavoriteMovie(update);
-      localStorage.setItem("favoriteMovies", JSON.stringify(update));
+    if (session) {
+      if (addFavoriteMovie.find((movie) => movie.id === m.id)) {
+        const update = addFavoriteMovie.filter((movie) => movie.id !== m.id);
+        setAddFavoriteMovie(update);
+        localStorage.setItem("favoriteMovies", JSON.stringify(update));
+      } else {
+        const update = [...addFavoriteMovie, m];
+        setAddFavoriteMovie(update);
+        localStorage.setItem("favoriteMovies", JSON.stringify(update));
+      }
     } else {
-      const update = [...addFavoriteMovie, m];
-      setAddFavoriteMovie(update);
-      localStorage.setItem("favoriteMovies", JSON.stringify(update));
+      toast.error("You need to log in to add movies to your favorites.");
     }
   };
 
