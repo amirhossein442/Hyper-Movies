@@ -96,7 +96,7 @@ export const More = () => {
                       {movie.release_date}
                     </span>
                   </h2>
-                  <h3 className="  text-slate-300 mt-5 sm:w-30 sm:w-full text-xs leading-6 sm:text-xl sm:leading-8">
+                  <h3 className="  text-slate-300 mt-5 sm:w-30 sm:w-full  text-xs leading-4 sm:leading-8 sm:text-xl ">
                     {movie.overview}
                   </h3>
                   <div className="sm:flex">
