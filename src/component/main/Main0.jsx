@@ -6,6 +6,9 @@ import { Main2 } from "./Main2";
 import { Title } from "../Title";
 
 export const Main0 = () => {
+  useEffect(()=> {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  },[])
   const [headerBg, setHeaderBg] = useState("/images/bg-cinema.jpg");
 
   return (
