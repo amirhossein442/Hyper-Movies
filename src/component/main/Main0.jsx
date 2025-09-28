@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FollowUs } from "../header/foloowUs";
 import { HeaderSlider } from "../header/headerSlider";
 import { Main1 } from "./main1";

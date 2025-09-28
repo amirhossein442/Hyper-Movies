@@ -7,6 +7,9 @@ import { LoginContext } from "../Context/LoginContext";
 export const FavoriteLikePage = () => {
   const { addFavoriteMovie } = useContext(FavoriteMovieContext);
   const {session} = useContext(LoginContext);
+  useEffect(()=> {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  })
   return (
     <div>
       <header

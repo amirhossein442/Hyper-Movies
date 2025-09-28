@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LoginContext } from "../Context/LoginContext";
 import { Link } from "react-router-dom";
 import { Title } from "../component/Title";
@@ -7,17 +7,22 @@ export const LoginPage = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const { login, logOut, session, profile } = useContext(LoginContext);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   const handelSubmit = (e) => {
     e.preventDefault();
     login(userName, password);
   };
 
   function handelLogOut() {
-    setUserName("")
-    setPassword("")
+    setUserName("");
+    setPassword("");
     logOut();
   }
-  
+
   return (
     <div className="bg-slate-900 ">
       <Title>Login</Title>
