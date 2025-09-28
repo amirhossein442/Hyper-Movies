@@ -181,7 +181,7 @@ export const More = () => {
               </div>
             </div>
           ) : (
-            <p className="text-white py-10 flex justify-center text-3xl ">
+            <p className="text-white py-10 flex justify-center items-center xl:text-3xl ">
               Loading movie information...
             </p>
           )}

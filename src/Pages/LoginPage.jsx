@@ -49,7 +49,7 @@ export const LoginPage = () => {
         ) : (
           <form
             onSubmit={handelSubmit}
-            className="container mx-auto flex items-center justify-center flex-col py-12 mb-96 gap-4 w-2/4 border-2 border-slate-700 rounded-3xl backdrop-blur-md"
+            className="container mx-auto flex items-center justify-center flex-col py-12 mb-96 gap-4 w-3/4 xl:w-2/4 border-2 border-slate-700 rounded-3xl backdrop-blur-md"
           >
             <input
               className="w-3/4 h-14  rounded-sm bg-transparent border-4 border-rose-700 outline-none text-white  border-t-0 border-l-0 border-r-0 sm:text-2xl "
