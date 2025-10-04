@@ -7,9 +7,7 @@ import { Title } from "../Title";
 
 export const Main0 = () => {
   const [headerBg, setHeaderBg] = useState("/images/bg-cinema.jpg");
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  },[]);
+  
   return (
     <div className="bg-[rgb(2_13_24)]">
       <header

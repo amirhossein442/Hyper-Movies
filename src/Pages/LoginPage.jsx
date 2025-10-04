@@ -8,10 +8,6 @@ export const LoginPage = () => {
   const [password, setPassword] = useState("");
   const { login, logOut, session, profile } = useContext(LoginContext);
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  },[]);
-
   const handelSubmit = (e) => {
     e.preventDefault();
     login(userName, password);

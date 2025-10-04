@@ -10,11 +10,13 @@ import { SearchPage } from "./Pages/SearchPage";
 import { FavoriteLikePage } from "./Pages/FavoriteLikePage";
 import { LoginPage } from "./Pages/LoginPage";
 import { useEffect } from "react";
+import { ScrollToTop } from "./component/Scroll";
 
 function App() {
   
   return (
     <Router>
+      <ScrollToTop/>
       <Header />
       <Routes>
         <Route path="/" element={<Main0 />} />

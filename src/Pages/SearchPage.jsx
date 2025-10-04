@@ -9,8 +9,6 @@ export const SearchPage = () => {
   const query = searchParams.get("query");
   console.log(query);
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    
     const timeOut = setTimeout(() => {
       if (query && query.trim() !== "") {
         axios

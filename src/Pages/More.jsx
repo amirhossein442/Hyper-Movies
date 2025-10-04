@@ -24,7 +24,6 @@ export const More = () => {
   }, [movie, addFavoriteMovie]);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
     axios
       .get(
         `https://api.themoviedb.org/3/movie/${id}?api_key=c749ba85a95fb5a1032d6cc9d8bf39a0`
