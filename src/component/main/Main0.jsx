@@ -6,18 +6,17 @@ import { Main2 } from "./Main2";
 import { Title } from "../Title";
 
 export const Main0 = () => {
-  useEffect(()=> {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  },[])
   const [headerBg, setHeaderBg] = useState("/images/bg-cinema.jpg");
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  },[]);
   return (
     <div className="bg-[rgb(2_13_24)]">
       <header
         className="md:px-1 "
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0 0 0 / 100%), rgb(2 13 24/ 24%), rgb(2 13 24/ 50%)),url(${headerBg})`,
-          backgroundSize:"cover",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           objectFit: "fill",

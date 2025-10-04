@@ -10,7 +10,7 @@ export const LoginPage = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  },[]);
 
   const handelSubmit = (e) => {
     e.preventDefault();

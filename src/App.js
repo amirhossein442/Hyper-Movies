@@ -9,18 +9,20 @@ import { More } from "./Pages/More";
 import { SearchPage } from "./Pages/SearchPage";
 import { FavoriteLikePage } from "./Pages/FavoriteLikePage";
 import { LoginPage } from "./Pages/LoginPage";
+import { useEffect } from "react";
 
 function App() {
+  
   return (
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Main0 />}/>
-        <Route path="/tvshows" element={< TvShowsPage />}/>
-        <Route path="/search" element={<SearchPage />}/>
-        <Route path="/more/:id" element={< More />}/>
-        <Route path="/favoritelike" element={< FavoriteLikePage />}/>
-        <Route path="/login" element={<LoginPage />}/>
+        <Route path="/" element={<Main0 />} />
+        <Route path="/tvshows" element={<TvShowsPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/more/:id" element={<More />} />
+        <Route path="/favoritelike" element={<FavoriteLikePage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
       <Footer />
     </Router>

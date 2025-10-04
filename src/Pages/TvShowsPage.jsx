@@ -7,10 +7,6 @@ import { Title } from "../component/Title";
 export const TvShowsPage = () => {
   const [TvShoesMovie] = useAxios("movie/now_playing");
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
   return (
     <div className="bg-[rgb(2_13_24)] ">
       <header
