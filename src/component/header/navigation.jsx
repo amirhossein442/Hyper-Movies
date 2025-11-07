@@ -51,7 +51,7 @@ export const Navigation = () => {
           </ul>
         </div>
         {session ? (
-          <Link to={"/login"} className="text-white lg:ml-4 w-30  items-center">
+          <Link to={"/login"} className="text-white ml-5  w-30  items-center">
             {profile.avatar?.tmdb.avatar_path ? (
               <img
                 src={`https://image.tmdb.org/t/p/w300${profile.avatar?.tmdb.avatar_path}`}
@@ -65,10 +65,6 @@ export const Navigation = () => {
                 className=" rounded-full w-16 h-16 object-cover "
               />
             )}
-
-            <p className="flex justify-center w-14 text-sm ">
-              {profile.username}
-            </p>
           </Link>
         ) : (
           <div className="hidden lg:block ml-auto uppercase">
@@ -107,11 +103,11 @@ export const Navigation = () => {
       </nav>
 
       <div
-        className={`z- transition-all duration-500${
+        className={` z- transition-all duration-500${
           isHideMenu ? " hidden " : "opacity-100"
         }`}
       >
-        <ul className="bg-slate-900 border-t-2 border-slate-500 text-center text-slate-200 py-4">
+        <ul className="mr-auto -mt-28 pt-32 w-52 h-80 bg-slate-900 border-t-2 border-slate-500 text-center text-slate-200 py-4">
           {menuItems.map((item, index) => (
             <li
               key={index}
