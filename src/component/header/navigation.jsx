@@ -107,7 +107,7 @@ export const Navigation = () => {
           isHideMenu ? " hidden " : "opacity-100"
         }`}
       >
-        <ul className="mr-auto -mt-28 pt-32 w-52 h-80 bg-slate-900 border-t-2 border-slate-500 text-center text-slate-200 py-4">
+        <ul className="mr-auto -mt-28 pt-32 w-52 h-80 bg-gradient-to-b from-slate-950 to-slate-600 border-t-2 border-slate-500 text-center text-slate-200 py-4">
           {menuItems.map((item, index) => (
             <li
               key={index}
