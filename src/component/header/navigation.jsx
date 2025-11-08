@@ -29,7 +29,6 @@ export const Navigation = () => {
   return (
     <>
       <nav className="flex items-center justify text-slate-200 justify-between px-6 pt-6 md:bg-transparent">
-        
         <div className="flex  lg:hidden">
           <button onClick={() => setIsHideMenu(true)}>
             <svg
@@ -45,21 +44,20 @@ export const Navigation = () => {
               />
             </svg>
           </button>
-
-          <NavLink to={"/"}>
-            <h1 className=" text-2xl ml-5 ">
+        </div>
+        
+          <div className="flex items-center ">
+            <NavLink to={"/"}>
+            <h1 className=" text-2xl  ">
               Hyper<span className="text-rose-600 font-bold">Movies</span>
               <p className="text-xs text-center text-slate-400">Film review</p>
             </h1>
           </NavLink>
-        </div>
-
-        <div>
-          <ul className="hidden lg:flex gap-6 uppercase">
+          <ul className="hidden lg:ml-10  lg:flex  gap-6 uppercase">
             {menuItems.map((item, index) => (
               <li
                 key={index}
-                className="hover:text-rose-600 transition-all duration-300"
+                className=" hover:text-rose-600 transition-all duration-300"
               >
                 <NavLink className={isActiveClass} to={item.path}>
                   {item.name}
@@ -68,6 +66,11 @@ export const Navigation = () => {
             ))}
           </ul>
         </div>
+
+        
+        
+
+        
 
         {session ? (
           <Link to={"/login"} className="text-white ml-5 w-30 items-center">
