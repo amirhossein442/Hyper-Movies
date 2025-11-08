@@ -11,7 +11,7 @@ export const SearchBox = () => {
   }, [searchValue]);
 
   return (
-    <section className="mt-5 pt-5 px-10 sm:p-0 text-state-300">
+    <section className="mt-5 py-5 px-10 lg:p-0 text-state-300">
       <div className="relative mt-0">
         <input
           value={searchValue}
