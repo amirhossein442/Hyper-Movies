@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext,useState } from "react";
 import { LoginContext } from "../Context/LoginContext";
-import { Link } from "react-router-dom";
+
 import { Title } from "../component/Title";
 
 export const LoginPage = () => {

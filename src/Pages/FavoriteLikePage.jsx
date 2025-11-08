@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import { FavoriteMovieContext } from "../Context/FavoriteMovieContext";
 import { Link } from "react-router-dom";
 import { Title } from "../component/Title";

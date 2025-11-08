@@ -1,7 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import { useAxios } from "../../hooks/axioshook";
 
