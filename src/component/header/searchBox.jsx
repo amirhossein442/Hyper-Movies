@@ -11,13 +11,13 @@ export const SearchBox = () => {
   }, [searchValue]);
 
   return (
-    <section className="pt-5 text-state-300">
+    <section className="mt-5 pt-5 px-10 sm:p-0 text-state-300">
       <div className="relative mt-0">
         <input
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           type="text"
-          className="w-full bg-slate-600 text-2xl p-2 border-4 border-slate-900 outline-none 
+          className="w-full  bg-slate-600 text-2xl p-2 border-4 border-slate-900 outline-none 
           placeholder:text-sm"
           placeholder="Search for a movie, series, or show..."
         />
