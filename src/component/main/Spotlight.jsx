@@ -10,7 +10,7 @@ export const Spotlight = () => {
       </h2>
       <hr />
       {people.map((character, index) => (
-        <div className=" mt-5 text-white hover:cursor-pointer hover:text-rose-500 transition-all duration-300">
+        <div key={index} className=" mt-5 text-white hover:cursor-pointer hover:text-rose-500 transition-all duration-300">
           <div className="flex items-center gap-4">
             <img
               src={`https://image.tmdb.org/t/p/w300${character.profile_path}`}

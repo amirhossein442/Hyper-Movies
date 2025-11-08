@@ -9,13 +9,14 @@ import { More } from "./Pages/More";
 import { SearchPage } from "./Pages/SearchPage";
 import { FavoriteLikePage } from "./Pages/FavoriteLikePage";
 import { LoginPage } from "./Pages/LoginPage";
-import { useEffect } from "react";
 import { ScrollToTop } from "./component/Scroll";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   
   return (
     <Router>
+      <SpeedInsights/>
       <ScrollToTop/>
       <Header />
       <Routes>
