@@ -10,7 +10,7 @@ export const useAxios = (endpoint) => {
         `https://api.themoviedb.org/3/${endpoint}?api_key=c749ba85a95fb5a1032d6cc9d8bf39a0`
       )
       .then((res) => setdata(res.data.results));
-  }, []);
+  }, [endpoint]);
 
   return [data]
 }
