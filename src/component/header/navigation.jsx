@@ -67,11 +67,6 @@ export const Navigation = () => {
           </ul>
         </div>
 
-        
-        
-
-        
-
         {session ? (
           <Link to={"/login"} className="text-white ml-5 w-30 items-center">
             {profile.avatar?.tmdb.avatar_path ? (
@@ -115,7 +110,7 @@ export const Navigation = () => {
       )}
 
       <div
-        className={`fixed top-0 left-0 z-50 h-full w-64 bg-gradient-to-b from-slate-950 to-slate-800 border-r border-slate-600 text-slate-200  transition-transform duration-500 ${
+        className={`fixed top-0 left-0 z-50 h-full w-64 bg-gradient-to-b from-black/90 to-slate-950 border-r border-slate-600 text-slate-200  transition-transform duration-500 ${
           isHideMenu ? "translate-x-0" : "-translate-x-full"
         }`}
       >

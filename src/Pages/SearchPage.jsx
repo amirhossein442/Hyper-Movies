@@ -30,7 +30,7 @@ export const SearchPage = () => {
     <div className=" bg-slate-900 pb-40">
       <Title>Searching</Title>
       {movieSearch.length === 0 ? (
-        <p className="text-white text-3xl flex justify-center">IS NOT DEFIND</p>
+        <p className="text-white text-xl flex justify-center pt-10">IS NOT DEFIND</p>
       ) : (
         <div className="container mx-auto px-10 pt-10 aspect-12/9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pb-24">
           {movieSearch.map((movie) => (

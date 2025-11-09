@@ -1,6 +1,6 @@
 export const FollowUs = () => {
   return (
-    <section className="container text-slate-200 text-sm mb-8">
+    <section className="container text-slate-200 text-sm mb-8 -ml-5">
       <div className="flex items-center justify-end">
         <span className="text-lg">FollowUs: </span>
         <ul className="flex gap-4 ml-4 z-10">
