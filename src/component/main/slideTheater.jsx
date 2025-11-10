@@ -9,7 +9,7 @@ export const SlideMovie = () => {
   
   return (
     <div className="container lg:w-8/12 mr-20 mt-20">
-      <h1 className="text-3xl font-bold text-white mb-5 ml-4 sm:ml-0">
+      <h1 className="text-3xl font-bold text-white mb-5  ml-4 sm:ml-0">
         in theater
       </h1>
       <Swiper
@@ -39,14 +39,14 @@ export const SlideMovie = () => {
         loop
       >
         {movies.map((movie, index) => (
-          <SwiperSlide key={index} className="p-10 sm:p-0">
+          <SwiperSlide key={index} className="px-10 mb-10 sm:p-0">
             <Link to={`/more/${movie.id}`} className="relative">
               <img
                 alt={movie.title}
-                className="w-[400px] h-[280px]  object-fill rounded"
+                className="w-[350px] h-[400px] lg:w-[350px] lg:h-[280px]  object-fill rounded"
                 src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
               />
-              <div className=" absolute inset-0 bg-gradient-to-b from-slate-600/10 hover:from-black/50 to-slate-900/60 hover:to-rose-500/50"></div>
+              <div className=" absolute inset-0 bg-gradient-to-b  from-black/20 hover:from-black/50 to-slate-950/70 hover:to-rose-500/50"></div>
 
               <div className="absolute bottom-14 left-5 flex-column text-2xl text-white">
                 <span className="flex items-center gap-2">

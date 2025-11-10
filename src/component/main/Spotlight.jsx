@@ -13,7 +13,7 @@ export const Spotlight = () => {
         <div key={index} className=" mt-5 text-white hover:cursor-pointer hover:text-rose-500 transition-all duration-300">
           <div className="flex items-center gap-4">
             <img
-              src={`https://image.tmdb.org/t/p/w7800${character.profile_path}`}
+              src={`https://image.tmdb.org/t/p/w780${character.profile_path}`}
               alt="test"
               className="h-[70px] w-[70px] object-top object-cover"
             />

@@ -36,14 +36,14 @@ export const SlideMovie2 = () => {
         loop
       >
         {movies.map((movie, index) => (
-          <SwiperSlide key={index} className="p-10 sm:p-0">
+          <SwiperSlide key={index} className="px-10 sm:p-0">
             <Link to={`/more/${movie.id}`} className="relative">
               <img
                 alt="img"
-                className="w-[400px] h-[280px] sm:w-full object-fill rounded"
+                className="w-[350px] h-[400px] lg:w-[350px] lg:h-[280px] sm:w-full object-fill rounded"
                 src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
               />
-              <div className=" absolute inset-0 bg-gradient-to-b from-slate-600/10 hover:from-black/50 to-slate-900/60 hover:to-rose-500/50"></div>
+              <div className=" absolute inset-0 bg-gradient-to-b  from-black/20 hover:from-black/50 to-slate-950/70 hover:to-rose-500/50"></div>
 
               <div className="absolute bottom-14 left-5 flex-column text-2xl text-white">
                 <span className="flex items-center gap-2">
